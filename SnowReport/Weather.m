@@ -15,11 +15,12 @@
 @synthesize minTemp = _minTemp;
 @synthesize windSpeed = _windSpeed;
 @synthesize windDir = _windDir;
-@synthesize currentConditions = _currentConditions;
+@synthesize conditions = _conditions;
+@synthesize probabilityPrecip = _probabilityPrecip;
 @synthesize imageURL = _imageURL;
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@", _currentTemp];
+    return [NSString stringWithFormat:@"%@", _conditions];
 }
 
 @end

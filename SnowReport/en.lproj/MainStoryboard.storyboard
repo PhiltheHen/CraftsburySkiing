@@ -39,6 +39,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jiQ-2B-lcA" kind="push" id="2yq-QJ-bIO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbw-5k-Ox6">
                                 <constraints>
@@ -52,6 +55,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="hPo-Y6-Xze" kind="push" id="zYr-C0-pM5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="conditionsLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsD-EV-T6I">
                                 <constraints>
@@ -134,6 +140,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="85" y="6"/>
+        </scene>
+        <!--Snow Report View Controller-->
+        <scene sceneID="9dl-aE-hbU">
+            <objects>
+                <viewController id="hPo-Y6-Xze" customClass="SnowReportViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="feH-dM-3yF">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mtb-sn-yoY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y09-Zu-MmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="471"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="pxp-qn-HJN">
+            <objects>
+                <viewController id="jiQ-2B-lcA" customClass="WeatherViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cyT-LL-w5x">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="testLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8I-gJ-uoV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="VK8-fL-TrK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O8I-gJ-uoV" firstAttribute="leading" secondItem="cyT-LL-w5x" secondAttribute="leading" constant="134" id="bxj-Qp-DrX"/>
+                            <constraint firstItem="O8I-gJ-uoV" firstAttribute="top" secondItem="cyT-LL-w5x" secondAttribute="top" constant="147" id="wU5-BM-GXH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wNK-Ss-uu0"/>
+                    <connections>
+                        <outlet property="testLabel" destination="O8I-gJ-uoV" id="2rD-2V-xR8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wic-y0-bno" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="-320"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

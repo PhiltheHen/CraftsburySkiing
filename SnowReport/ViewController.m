@@ -75,9 +75,9 @@
 
 - (void) populateLabels{
     
-    NSLog(@"%@", self.currentWeather.currentConditions);
+    NSLog(@"%@", self.currentWeather.conditions);
     
-    self.conditionsLabel.text = self.currentWeather.currentConditions;
+    self.conditionsLabel.text = self.currentWeather.conditions;
     self.currentTempLabel.text = [NSString stringWithFormat:@"%@%@", self.currentWeather.currentTemp, @" ºF"];
     
     NSURL *imageURL = [NSURL URLWithString:self.currentWeather.imageURL];
@@ -117,7 +117,7 @@ static NSString *kIconURL = @"icon_url_name";
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
     if ([elementName isEqualToString:kWeather]){
-        self.currentWeather.currentConditions = _currentString;
+        self.currentWeather.conditions = _currentString;
     } else if ([elementName isEqualToString:kCurrent_Temp]){
         self.currentWeather.currentTemp = _currentString;
     } else if ([elementName isEqualToString:kWind_Speed]){
@@ -127,7 +127,7 @@ static NSString *kIconURL = @"icon_url_name";
     } else if ([elementName isEqualToString:kIconURL]){
         self.currentWeather.imageURL = [NSString stringWithFormat:@"%@%@", @"http://forecast.weather.gov/images/wtf/small/", _currentString];
     }
-    if ([elementName isEqualToString:@"privacy_policy_url"]){ //define end for prasing data. MIGHT NEED TO EDIT
+    if ([elementName isEqualToString:@"privacy_policy_url"]){ //define end for parsing data. MIGHT NEED TO EDIT
         [self finishedCurrentWeather:_currentWeather];
     }
     

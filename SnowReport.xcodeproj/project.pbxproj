@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AA607E4172D70B000A7C20A /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA607E3172D70B000A7C20A /* WeatherViewController.m */; };
+		3AA607E7172D70F500A7C20A /* SnowReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA607E6172D70F500A7C20A /* SnowReportViewController.m */; };
 		3AE99F8D172C289B00BF93E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE99F8C172C289B00BF93E3 /* UIKit.framework */; };
 		3AE99F8F172C289B00BF93E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE99F8E172C289B00BF93E3 /* Foundation.framework */; };
 		3AE99F91172C289B00BF93E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE99F90172C289B00BF93E3 /* CoreGraphics.framework */; };
@@ -29,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AA607E2172D70B000A7C20A /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		3AA607E3172D70B000A7C20A /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		3AA607E5172D70F500A7C20A /* SnowReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowReportViewController.h; sourceTree = "<group>"; };
+		3AA607E6172D70F500A7C20A /* SnowReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowReportViewController.m; sourceTree = "<group>"; };
 		3AE99F89172C289B00BF93E3 /* SnowReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE99F8C172C289B00BF93E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AE99F8E172C289B00BF93E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +114,10 @@
 				3AE99F9B172C289B00BF93E3 /* AppDelegate.h */,
 				3AE99F9C172C289B00BF93E3 /* AppDelegate.m */,
 				3AE99FA4172C289B00BF93E3 /* MainStoryboard.storyboard */,
+				3AA607E5172D70F500A7C20A /* SnowReportViewController.h */,
+				3AA607E6172D70F500A7C20A /* SnowReportViewController.m */,
+				3AA607E2172D70B000A7C20A /* WeatherViewController.h */,
+				3AA607E3172D70B000A7C20A /* WeatherViewController.m */,
 				3AE99FA7172C289B00BF93E3 /* ViewController.h */,
 				3AE99FA8172C289B00BF93E3 /* ViewController.m */,
 				3AE99FC1172C2A0D00BF93E3 /* Weather.h */,
@@ -216,6 +226,8 @@
 				3AE99FBF172C29F600BF93E3 /* TFHppleElement.m in Sources */,
 				3AE99FC0172C29F600BF93E3 /* XPathQuery.m in Sources */,
 				3AE99FC3172C2A0D00BF93E3 /* Weather.m in Sources */,
+				3AA607E4172D70B000A7C20A /* WeatherViewController.m in Sources */,
+				3AA607E7172D70F500A7C20A /* SnowReportViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

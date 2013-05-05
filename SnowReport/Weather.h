@@ -10,12 +10,13 @@
 
 @interface Weather : NSObject
 
-@property (nonatomic, copy) NSString *currentConditions;
+@property (nonatomic, copy) NSString *conditions;
 @property (nonatomic, copy) NSString *currentTemp;
 @property (nonatomic, copy) NSString *maxTemp;
 @property (nonatomic, copy) NSString *minTemp;
 @property (nonatomic, copy) NSString *windSpeed;
 @property (nonatomic, copy) NSString *windDir;
+@property (nonatomic, copy) NSString *probabilityPrecip;
 @property (nonatomic, copy) NSString *imageURL;
 
 @end
