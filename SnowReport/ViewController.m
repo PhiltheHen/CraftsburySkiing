@@ -24,6 +24,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // ************************************ CURRENT WEATHER XML PARSER ************************************
 	self.xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString: @"http://w1.weather.gov/xml/current_obs/KMVL.xml"]];
     
     self.xmlParser.delegate = self;
@@ -34,6 +36,7 @@
     else
         NSLog(@"Failed to parse");
     
+    // ************************************ SNOW REPORT MAIN HTML PARSER ************************************
     NSURL *snowReportUrl = [NSURL URLWithString: @"http://craftsbury.com/skiing/nordic_center/snow_report.htm"];
     NSData *snowReportData = [NSData dataWithContentsOfURL:snowReportUrl];
     
@@ -75,8 +78,6 @@
 
 - (void) populateLabels{
     
-    NSLog(@"%@", self.currentWeather.conditions);
-    
     self.conditionsLabel.text = self.currentWeather.conditions;
     self.currentTempLabel.text = [NSString stringWithFormat:@"%@%@", self.currentWeather.currentTemp, @" ºF"];
     
@@ -95,8 +96,6 @@
 static NSString *kCurrent_Observation = @"current_observation";
 static NSString *kWeather = @"weather";
 static NSString *kCurrent_Temp = @"temp_f";
-static NSString *kWind_Speed = @"wind_mph";
-static NSString *kWind_Dir = @"wind_dir";
 static NSString *kIconURL = @"icon_url_name";
 
 - (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
@@ -104,7 +103,7 @@ static NSString *kIconURL = @"icon_url_name";
         self.currentWeather = [[Weather alloc] init];
         self.storeCharacters = NO;
     }
-    else if ([elementName isEqualToString:kWeather] || [elementName isEqualToString:kCurrent_Temp] || [elementName isEqualToString:kWind_Speed] || [elementName isEqualToString:kWind_Dir]|| [elementName isEqualToString:kIconURL]) {
+    else if ([elementName isEqualToString:kWeather] || [elementName isEqualToString:kCurrent_Temp] || [elementName isEqualToString:kIconURL]) {
         [self.currentString setString:@""];
         self.storeCharacters = YES;
     }
@@ -120,10 +119,6 @@ static NSString *kIconURL = @"icon_url_name";
         self.currentWeather.conditions = _currentString;
     } else if ([elementName isEqualToString:kCurrent_Temp]){
         self.currentWeather.currentTemp = _currentString;
-    } else if ([elementName isEqualToString:kWind_Speed]){
-        self.currentWeather.windSpeed = _currentString;
-    } else if ([elementName isEqualToString:kWind_Dir]){
-        self.currentWeather.windDir = _currentString;
     } else if ([elementName isEqualToString:kIconURL]){
         self.currentWeather.imageURL = [NSString stringWithFormat:@"%@%@", @"http://forecast.weather.gov/images/wtf/small/", _currentString];
     }
@@ -134,7 +129,7 @@ static NSString *kIconURL = @"icon_url_name";
     self.storeCharacters = NO;
 }
 
-- (void) finishedCurrentWeather:(Weather *)w{ // in case you want to do something with Weather object
+- (void) finishedCurrentWeather:(Weather *)w{
     [self populateLabels];
     self.currentWeather = nil;
 }
@@ -146,7 +141,6 @@ static NSString *kIconURL = @"icon_url_name";
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser{
     NSLog(@"Document Ended");
-    //[self.tableView reloadData]; // MIGHT NOT NEED
     
     
 }

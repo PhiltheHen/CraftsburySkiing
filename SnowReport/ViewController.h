@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "Weather.h"
 #import "TFHpple.h"
+#import "AFNetworking.h"
 
 @interface ViewController : UIViewController <NSXMLParserDelegate>
 

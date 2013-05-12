@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Weather.h"
+#import "AFNetworking.h"
 
 @interface WeatherViewController : UIViewController <NSXMLParserDelegate>
 

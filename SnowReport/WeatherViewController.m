@@ -22,7 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.xmlParserForecast = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdBrowserClientByDay.php?zipCodeList=05827&format=24+hourly&numDays=7"]];
+	self.xmlParserForecast = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php?lat=44.68&lon=-72.36&product=time-series&begin=&end=&maxt=maxt&mint=mint&wx=wx"]];
     
     self.xmlParserForecast.delegate = self;
     self.currentString = [NSMutableString string];
@@ -50,7 +50,7 @@
 #pragma mark -
 #pragma mark Forecast Parser Delegate
 
-static NSString *kForecast = @"location";
+static NSString *kForecast = @"data";
 static NSString *kTemp = @"temperature";
 static NSString *kPoP = @"probability-of-precipitation";
 static NSString *kConditions = @"weather-conditions";
@@ -72,6 +72,8 @@ static NSString *kConditionsImage = @"conditions-icon";
 
 - (void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
     if (self.storeCharacters) [self.currentString appendString:string];
+    
+    NSLog(@"%@", self.currentString);
 }
 
 - (void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
