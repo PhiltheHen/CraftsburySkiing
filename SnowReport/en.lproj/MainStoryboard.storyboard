@@ -163,26 +163,9 @@
                     <view key="view" contentMode="scaleToFill" id="cyT-LL-w5x">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="testLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8I-gJ-uoV">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="137" id="VK8-fL-TrK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="O8I-gJ-uoV" firstAttribute="leading" secondItem="cyT-LL-w5x" secondAttribute="leading" constant="134" id="bxj-Qp-DrX"/>
-                            <constraint firstItem="O8I-gJ-uoV" firstAttribute="top" secondItem="cyT-LL-w5x" secondAttribute="top" constant="147" id="wU5-BM-GXH"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wNK-Ss-uu0"/>
-                    <connections>
-                        <outlet property="testLabel" destination="O8I-gJ-uoV" id="2rD-2V-xR8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wic-y0-bno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

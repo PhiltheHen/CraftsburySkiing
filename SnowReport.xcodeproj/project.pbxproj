@@ -18,6 +18,8 @@
 		3AD3E06E173EACB500935923 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3E063173EACB500935923 /* AFURLConnectionOperation.m */; };
 		3AD3E06F173EACB500935923 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3E065173EACB500935923 /* AFXMLRequestOperation.m */; };
 		3AD3E070173EACB500935923 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3E067173EACB500935923 /* UIImageView+AFNetworking.m */; };
+		3AD3E072173FE71B00935923 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD3E071173FE71B00935923 /* MobileCoreServices.framework */; };
+		3AD3E074173FE72100935923 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD3E073173FE72100935923 /* SystemConfiguration.framework */; };
 		3AE99F8D172C289B00BF93E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE99F8C172C289B00BF93E3 /* UIKit.framework */; };
 		3AE99F8F172C289B00BF93E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE99F8E172C289B00BF93E3 /* Foundation.framework */; };
 		3AE99F91172C289B00BF93E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE99F90172C289B00BF93E3 /* CoreGraphics.framework */; };
@@ -63,6 +65,8 @@
 		3AD3E065173EACB500935923 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		3AD3E066173EACB500935923 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		3AD3E067173EACB500935923 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		3AD3E071173FE71B00935923 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3AD3E073173FE72100935923 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3AE99F89172C289B00BF93E3 /* SnowReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE99F8C172C289B00BF93E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3AE99F8E172C289B00BF93E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD3E074173FE72100935923 /* SystemConfiguration.framework in Frameworks */,
+				3AD3E072173FE71B00935923 /* MobileCoreServices.framework in Frameworks */,
 				3AE99FC5172C2D9B00BF93E3 /* libxml2.2.dylib in Frameworks */,
 				3AE99F8D172C289B00BF93E3 /* UIKit.framework in Frameworks */,
 				3AE99F8F172C289B00BF93E3 /* Foundation.framework in Frameworks */,
@@ -154,6 +160,8 @@
 		3AE99F8B172C289B00BF93E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AD3E073173FE72100935923 /* SystemConfiguration.framework */,
+				3AD3E071173FE71B00935923 /* MobileCoreServices.framework */,
 				3AE99FC4172C2D9B00BF93E3 /* libxml2.2.dylib */,
 				3AE99F8C172C289B00BF93E3 /* UIKit.framework */,
 				3AE99F8E172C289B00BF93E3 /* Foundation.framework */,

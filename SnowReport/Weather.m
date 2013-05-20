@@ -10,14 +10,18 @@
 
 @implementation Weather
 
-@synthesize currentTemp = _currentTemp;
-@synthesize maxTemp = _maxTemp;
-@synthesize minTemp = _minTemp;
-@synthesize windSpeed = _windSpeed;
-@synthesize windDir = _windDir;
 @synthesize conditions = _conditions;
-@synthesize probabilityPrecip = _probabilityPrecip;
-@synthesize imageURL = _imageURL;
+@synthesize currentTemp = _currentTemp;
+@synthesize currentConditionsImageUrl = _currentConditionsImageUrl;
+
+@synthesize maxTempArray = _maxTempArray;
+@synthesize minTempArray = _minTempArray;
+@synthesize hourlyTemp = _hourlyTemp;
+@synthesize windSpeedArray = _windSpeedArray;
+@synthesize windDirArray = _windDirArray;
+@synthesize popArray = _popArray;
+@synthesize forecastImageUrl = _forecastImageUrl;
+
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"%@", _conditions];

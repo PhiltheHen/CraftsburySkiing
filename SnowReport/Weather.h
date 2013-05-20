@@ -12,11 +12,15 @@
 
 @property (nonatomic, copy) NSString *conditions;
 @property (nonatomic, copy) NSString *currentTemp;
-@property (nonatomic, copy) NSString *maxTemp;
-@property (nonatomic, copy) NSString *minTemp;
-@property (nonatomic, copy) NSString *windSpeed;
-@property (nonatomic, copy) NSString *windDir;
-@property (nonatomic, copy) NSString *probabilityPrecip;
-@property (nonatomic, copy) NSString *imageURL;
+@property (nonatomic, copy) NSString *currentConditionsImageUrl;
+
+@property (nonatomic, copy) NSArray *maxTempArray;
+@property (nonatomic, copy) NSArray *minTempArray;
+@property (nonatomic, copy) NSArray *hourlyTemp;
+@property (nonatomic, copy) NSString *windSpeedArray;
+@property (nonatomic, copy) NSString *windDirArray;
+@property (nonatomic, copy) NSString *popArray;
+@property (nonatomic, copy) NSString *forecastImageUrl;
+
 
 @end
