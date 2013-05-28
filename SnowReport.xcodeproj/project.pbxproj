@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1022631753D0E3000A8617 /* MainView-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1022601753D0E3000A8617 /* MainView-568@2x.png */; };
+		3A1022641753D0E3000A8617 /* MainView.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1022611753D0E3000A8617 /* MainView.png */; };
+		3A1022651753D0E3000A8617 /* MainView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1022621753D0E3000A8617 /* MainView@2x.png */; };
 		3AA607E4172D70B000A7C20A /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA607E3172D70B000A7C20A /* WeatherViewController.m */; };
 		3AA607E7172D70F500A7C20A /* SnowReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA607E6172D70F500A7C20A /* SnowReportViewController.m */; };
 		3AD3E068173EACB500935923 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3E056173EACB500935923 /* AFHTTPClient.m */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A1022601753D0E3000A8617 /* MainView-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainView-568@2x.png"; sourceTree = "<group>"; };
+		3A1022611753D0E3000A8617 /* MainView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainView.png; sourceTree = "<group>"; };
+		3A1022621753D0E3000A8617 /* MainView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainView@2x.png"; sourceTree = "<group>"; };
 		3AA607E2172D70B000A7C20A /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
 		3AA607E3172D70B000A7C20A /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 		3AA607E5172D70F500A7C20A /* SnowReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowReportViewController.h; sourceTree = "<group>"; };
@@ -114,6 +120,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1022661753D0EE000A8617 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3AE99F9E172C289B00BF93E3 /* Default.png */,
+				3AE99FA0172C289B00BF93E3 /* Default@2x.png */,
+				3AE99FB2172C29A800BF93E3 /* snowReportLaunchImage-568h@2x.png */,
+				3AE99FB3172C29A800BF93E3 /* snowReportLaunchImage.png */,
+				3AE99FB4172C29A800BF93E3 /* snowReportLaunchImage@2x.png */,
+				3AE99FA2172C289B00BF93E3 /* Default-568h@2x.png */,
+				3A1022601753D0E3000A8617 /* MainView-568@2x.png */,
+				3A1022611753D0E3000A8617 /* MainView.png */,
+				3A1022621753D0E3000A8617 /* MainView@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		3AD3E054173EACB500935923 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,12 +225,7 @@
 				3AE99F95172C289B00BF93E3 /* InfoPlist.strings */,
 				3AE99F98172C289B00BF93E3 /* main.m */,
 				3AE99F9A172C289B00BF93E3 /* SnowReport-Prefix.pch */,
-				3AE99F9E172C289B00BF93E3 /* Default.png */,
-				3AE99FA0172C289B00BF93E3 /* Default@2x.png */,
-				3AE99FB2172C29A800BF93E3 /* snowReportLaunchImage-568h@2x.png */,
-				3AE99FB3172C29A800BF93E3 /* snowReportLaunchImage.png */,
-				3AE99FB4172C29A800BF93E3 /* snowReportLaunchImage@2x.png */,
-				3AE99FA2172C289B00BF93E3 /* Default-568h@2x.png */,
+				3A1022661753D0EE000A8617 /* Images */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -272,6 +289,9 @@
 				3AE99FB5172C29A800BF93E3 /* snowReportLaunchImage-568h@2x.png in Resources */,
 				3AE99FB6172C29A800BF93E3 /* snowReportLaunchImage.png in Resources */,
 				3AE99FB7172C29A800BF93E3 /* snowReportLaunchImage@2x.png in Resources */,
+				3A1022631753D0E3000A8617 /* MainView-568@2x.png in Resources */,
+				3A1022641753D0E3000A8617 /* MainView.png in Resources */,
+				3A1022651753D0E3000A8617 /* MainView@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

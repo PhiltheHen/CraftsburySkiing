@@ -8,41 +8,36 @@
 // adding comment here
 
 #import <UIKit/UIKit.h>
-#import "Weather.h"
 #import "TFHpple.h"
 #import "AFNetworking.h"
 
 @interface ViewController : UIViewController <NSXMLParserDelegate>
 
-@property (nonatomic, strong) Weather *craftsburyWeather;
-@property (nonatomic, assign) BOOL firstParse;
-
 @property (nonatomic, strong) NSXMLParser *xmlParser;
-@property (nonatomic, strong) NSMutableString *currentString;
-@property (nonatomic, assign) BOOL storeCharacters;
-
-@property (nonatomic, strong) NSXMLParser *xmlParserForecast;
-@property (nonatomic, strong) NSMutableArray *currentArray;
-@property (nonatomic, assign) BOOL storeElements;
-@property (nonatomic, strong) NSString *currentElement;
-
+@property (nonatomic, strong) NSMutableDictionary *craftsburyWeather;
+@property (nonatomic, strong) NSMutableDictionary *weatherElement;
+@property (nonatomic, strong) NSString *previousElement;
+@property (nonatomic, strong) NSString *elementName;
+@property (nonatomic, strong) NSMutableString *elementValue;
+@property (nonatomic, assign) BOOL errorParsing;
 
 @property (strong, nonatomic) TFHpple *snowReportParser;
 
 // *************** LABELS *******************
 @property (weak, nonatomic) IBOutlet UILabel *conditionsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentTempLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *conditionsImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *conditionsUIImageView;
+
 @property (weak, nonatomic) IBOutlet UILabel *kmOpenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *trackSetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *skateGroomedLabel;
 
 
 
+- (void) parseXMLFileAtURL:(NSString *)URL;
 
+- (void) parseHTMLFileAtURL:(NSString *)URL;
 
 - (void) populateLabels;
-
-- (void) finishedCurrentWeather:(Weather*)w;
 
 @end
