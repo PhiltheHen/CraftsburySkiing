@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "WeatherViewController.h"
+#import "TrailConditionsViewController.h"
 
 
 @interface ViewController ()
@@ -15,31 +17,64 @@
 
 @implementation ViewController
 
-@synthesize xmlParser = _xmlParser;
-@synthesize craftsburyWeather = _craftsburyWeather;
-@synthesize weatherElement = _weatherElement;
-@synthesize previousElement = _previousElement;
-@synthesize elementValue = _elementValue;
-@synthesize elementName = _elementName;
-@synthesize errorParsing = _errorParsing;
-
+@synthesize weatherElementsDictionary = _weatherElementsDictionary;
+@synthesize trailConditionsArray = _trailConditionsArray;
 @synthesize snowReportParser = _snowReportParser;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *currentWeatherURL = @"http://w1.weather.gov/xml/current_obs/KMVL.xml";
-    NSString *weatherForecastURL = @"http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php?lat=44.68&lon=-72.36&product=time-series&begin=&end=&maxt=maxt&mint=mint&temp=temp&pop12=pop12&wx=wx&icons=icons";
+    
+    NSString *weatherURL = @"http://api.wunderground.com/api/0f26d3b3dcb3da08/conditions/forecast/hourly/q/05827.json";
     NSString *snowReportURL = @"http://craftsbury.com/skiing/nordic_center/snow_report.htm";
     
-    //[self parseXMLFileAtURL:currentWeatherURL];
-    [self parseXMLFileAtURL:weatherForecastURL];
-    //[self parseHTMLFileAtURL:snowReportURL];
+    // Process data from API and web
+    [self parseJSONFileAtURL:weatherURL];
+    [self parseHTMLFileAtURL:snowReportURL];
 
 }
 
+- (void)parseJSONFileAtURL:(NSString *)URL
+{
+    // Process data for weather forecast
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URL]];
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){
+        
+        self.weatherElementsDictionary = (NSDictionary *)JSON;
+        [self storeWeatherData];
+    
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Weather. Try Again Later." message:[NSString stringWithFormat:@"%@",error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [av show];
+    }];
+
+    [operation start];
+    
+}
+
+- (void) storeWeatherData{
+    
+    // Store data so it can be used in subsequent view controller without another call to API
+    
+    NSDictionary *mainViewElements = [self.weatherElementsDictionary objectForKey:@"current_observation"];
+    
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[[mainViewElements valueForKey:@"icon_url"] stringByReplacingOccurrencesOfString:@"/k/" withString:@"/i/"]]];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    NSString *lastUpdated = [mainViewElements valueForKey:@"observation_time_rfc822"];
+    
+    self.date.text = [lastUpdated substringToIndex:[lastUpdated length] - 15]; // trim time elements from string
+    self.conditionsLabel.text = [mainViewElements valueForKey:@"weather"];
+    self.currentTemp.text = [NSString stringWithFormat:@"%d°F", [[mainViewElements valueForKey:@"temp_f"] integerValue]];
+    self.conditionsUIImageView.image = image;
+    
+}
+
+
 - (void)parseHTMLFileAtURL:(NSString *)URL{
-    // ************************************ SNOW REPORT MAIN HTML PARSER ************************************
+    // Process data for snow report and trail conditions
     
     NSData *snowReportData = [NSData dataWithContentsOfURL:[NSURL URLWithString:URL]];
     
@@ -56,184 +91,52 @@
         else {
             reportElementsData[index] = [element text];
             NSLog(@"%@", reportElementsData[index]);
-            //self.trackSetLabel.text = [[element objectForKey:@"]]
+            
+            // not sure what the key is at the moment...non-existant during off-season
+            // self.trackSetLabel.text = [[element objectForKey:@""]]
         }
         index++;
     }
+    
+    
+    // Do the same thing for trail conditions:
+    
+    // NEED TO FIGURE OUT CLASS FOR OPEN TRAILS. THE FOLLOWING ONLY WORKS FOR CLOSED TRAILS (off-season)
+    
+    NSArray *trailConditions = [self.snowReportParser searchWithXPathQuery:@"//td[@class='trail-closed']"];
+    
+    NSMutableArray *trailConditionsData = [[NSMutableArray alloc] initWithCapacity:0];
+
+    int idx = 0;
+    
+    for (TFHppleElement *element in trailConditions) {
+        trailConditionsData[idx] = [element text];
+        idx++;
+    }
+    
+    self.trailConditionsArray = trailConditionsData; // Pass this to TrailConditionsViewController
     
     self.kmOpenLabel.text = reportElementsData[0];
     self.trackSetLabel.text = reportElementsData[1];
     self.skateGroomedLabel.text = reportElementsData[2];
 }
 
-- (void)parserDidStartDocument:(NSXMLParser *)parser{
-    NSLog(@"File found and parsing started");
-}
-
-- (void)parseXMLFileAtURL:(NSString *)URL
-{
-
-    // ************************************ CURRENT WEATHER XML PARSER ************************************
-    self.craftsburyWeather = [[NSMutableDictionary alloc] init];
-    self.errorParsing=NO;
-
-    self.xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:URL]];
-    [self.xmlParser setDelegate:self];
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showForecast"]){
+        WeatherViewController *wvc = (WeatherViewController *)[segue destinationViewController];
+        wvc.craftsburyDetailWeather = self.weatherElementsDictionary;
+    }
     
-    // You may need to turn some of these on depending on the type of XML file you are parsing
-    [self.xmlParser setShouldProcessNamespaces:NO];
-    [self.xmlParser setShouldReportNamespacePrefixes:NO];
-    [self.xmlParser setShouldResolveExternalEntities:NO];
-    
-    [self.xmlParser parse];
-}
-
-- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError{
-    NSString *errorString = [NSString stringWithFormat:@"Error code %i", [parseError code]];
-    NSLog(@"Error parsing XML: %@", errorString);
-    
-    self.errorParsing = YES;
+    else if ([[segue identifier] isEqualToString:@"showTrailConditions"]){
+        TrailConditionsViewController *tcvc = (TrailConditionsViewController *)[segue destinationViewController];
+        tcvc.trailStatus = self.trailConditionsArray;
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-
-#pragma mark -
-#pragma mark Parser Delegate
-
-// Both Current Weather and Forecast Elements
-static NSString *kConditions = @"weather";
-
-// Current Weather Elements
-static NSString *kCurrent_Temp_F = @"temp_f";
-static NSString *kCurrent_Temp_C = @"temp_c";
-static NSString *kLastUpdated = @"observation_time";
-static NSString *kWindSpeedMPH = @"wind_mph";
-static NSString *kWindDir = @"wind_dir";
-static NSString *kCurrentIconURLBase = @"icon_url_base";
-static NSString *kCurrentIconURL = @"icon_url_name";
-
-// Forecast Elements
-static NSString *kTemp_Forecast = @"temperature";
-static NSString *kPoP = @"probability-of-precipitation";
-static NSString *kForecastIconURL = @"conditions-icon";
-static NSString *kTime_Stamp = @"layout-key";
-
-- (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
-    self.previousElement = self.elementName;
-    
-    NSLog(@"%@", qName);
-    
-    if(qName){
-        NSLog(@"HERE");
-        self.elementName = qName;
-    }
-    
-    if ([qName isEqualToString:kConditions]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kCurrent_Temp_F]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kCurrent_Temp_C]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kLastUpdated]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kWindSpeedMPH]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kWindDir]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kCurrentIconURLBase]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kCurrentIconURL]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kTemp_Forecast]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kPoP]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kForecastIconURL]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    } else if ([qName isEqualToString:kTime_Stamp]){
-        self.weatherElement = [NSMutableDictionary dictionary];
-    }
-
-        self.elementValue = [NSMutableString string];
-        
-}
-
-- (void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    
-    //NSLog(@"%@", self.elementName);
-    if (!self.elementName){
-        return;
-    }
-    
-    [self.elementValue appendString:string];
-    //NSLog(@"%@", self.elementValue);
-}
-
-- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
-    
-    // FOR THE CURRENT WEATHER ELEMENTS
-    if ([qName isEqualToString:kConditions] || [qName isEqualToString:kCurrent_Temp_C] || [qName isEqualToString:kCurrent_Temp_F]|| [qName isEqualToString:kLastUpdated]|| [qName isEqualToString:kWindSpeedMPH]|| [qName isEqualToString:kWindDir]|| [elementName isEqualToString:kCurrentIconURLBase] || [qName isEqualToString:kCurrentIconURL]){
-        
-        [self.craftsburyWeather setObject:self.elementValue forKey:elementName];
-        
-        self.weatherElement = nil;
- 
-        //NSLog(@"%@", self.craftsburyWeather);
-        
-        // FOR THE WEATHER FORECAST ELEMENTS
-    } else if ([qName isEqualToString:kTemp_Forecast] || [qName isEqualToString:kPoP] || [qName isEqualToString:kForecastIconURL] || [qName isEqualToString:kTime_Stamp]){
-    
-        
-        //NSLog(@"%@", self.weatherElement);
-        
-        self.weatherElement = nil;
-        
-    }
-    
-    self.elementName = nil;
-
-}
-
-- (void)parserDidEndDocument:(NSXMLParser *)parser{
-    
-    if (self.errorParsing == NO){
-        NSLog(@"Document ended");
-        [self populateLabels];
-        // CACHE HERE!!
-        
-        self.craftsburyWeather = nil; // is this necessary?
-    } else {
-        NSLog(@"Error occurred during XML processing");
-    }
-}
-
-#pragma mark - View Label Data Source
-
-- (void) populateLabels{
-    
-    self.conditionsLabel.text = [self.craftsburyWeather objectForKey:kConditions];
-    self.currentTempLabel.text = [self.craftsburyWeather objectForKey:kCurrent_Temp_F];
-    
-    
-    // LOOK INTO CORE GRAPHICS
-    
-    NSString *combinedURL = [NSString stringWithFormat:@"%@%@", [self.craftsburyWeather objectForKey:kCurrentIconURLBase], [self.craftsburyWeather objectForKey:kCurrentIconURL]];
-    NSString *fullURL = [combinedURL stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    
-    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:fullURL]];
-    UIImage *image = [UIImage imageWithData:imageData];
-    
-    self.conditionsUIImageView.image = image;
-    
-    
-    
-
 }
 
 @end

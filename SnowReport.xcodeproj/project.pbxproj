@@ -10,8 +10,22 @@
 		3A1022631753D0E3000A8617 /* MainView-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1022601753D0E3000A8617 /* MainView-568@2x.png */; };
 		3A1022641753D0E3000A8617 /* MainView.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1022611753D0E3000A8617 /* MainView.png */; };
 		3A1022651753D0E3000A8617 /* MainView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A1022621753D0E3000A8617 /* MainView@2x.png */; };
+		3A41BE3F1757CBC2008D3113 /* Settings-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE3E1757CBC2008D3113 /* Settings-Icon.png */; };
+		3A41BE411757D0C5008D3113 /* umbrella-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE401757D0C5008D3113 /* umbrella-icon.png */; };
+		3A41BE431757D0F9008D3113 /* wind-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE421757D0F9008D3113 /* wind-icon.png */; };
+		3A41BE4517593D07008D3113 /* wunderground-logo-horiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE4417593D07008D3113 /* wunderground-logo-horiz.png */; };
+		3A41BE471759435C008D3113 /* wunderground-logo-reg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE461759435C008D3113 /* wunderground-logo-reg.png */; };
+		3A41BE4917594419008D3113 /* wunderground-logo-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE4817594419008D3113 /* wunderground-logo-white.png */; };
+		3A41BE4D175D37F4008D3113 /* MainViewBlurred-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE4A175D37F3008D3113 /* MainViewBlurred-568@2x.png */; };
+		3A41BE4E175D37F4008D3113 /* MainViewBlurred.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE4B175D37F4008D3113 /* MainViewBlurred.png */; };
+		3A41BE4F175D37F4008D3113 /* MainViewBlurred@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE4C175D37F4008D3113 /* MainViewBlurred@2x.png */; };
+		3A41BE52175D3A7C008D3113 /* umbrella-icon-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE50175D3A7C008D3113 /* umbrella-icon-white.png */; };
+		3A41BE53175D3A7C008D3113 /* wind-icon-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE51175D3A7C008D3113 /* wind-icon-white.png */; };
+		3A41BE56175E6663008D3113 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A41BE55175E6663008D3113 /* InfoViewController.m */; };
+		3A41BE5D176122C7008D3113 /* trail-conditions-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE5C176122C7008D3113 /* trail-conditions-list.png */; };
+		3A41BE6217616586008D3113 /* detail-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A41BE6117616586008D3113 /* detail-arrow.png */; };
+		3A41BE6B17626C1E008D3113 /* TrailConditionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A41BE6A17626C1E008D3113 /* TrailConditionsViewController.m */; };
 		3AA607E4172D70B000A7C20A /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA607E3172D70B000A7C20A /* WeatherViewController.m */; };
-		3AA607E7172D70F500A7C20A /* SnowReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA607E6172D70F500A7C20A /* SnowReportViewController.m */; };
 		3AD3E068173EACB500935923 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3E056173EACB500935923 /* AFHTTPClient.m */; };
 		3AD3E069173EACB500935923 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3E058173EACB500935923 /* AFHTTPRequestOperation.m */; };
 		3AD3E06A173EACB500935923 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3E05A173EACB500935923 /* AFImageRequestOperation.m */; };
@@ -40,7 +54,6 @@
 		3AE99FBE172C29F600BF93E3 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE99FB9172C29F600BF93E3 /* TFHpple.m */; };
 		3AE99FBF172C29F600BF93E3 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE99FBB172C29F600BF93E3 /* TFHppleElement.m */; };
 		3AE99FC0172C29F600BF93E3 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE99FBD172C29F600BF93E3 /* XPathQuery.m */; };
-		3AE99FC3172C2A0D00BF93E3 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE99FC2172C2A0D00BF93E3 /* Weather.m */; };
 		3AE99FC5172C2D9B00BF93E3 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE99FC4172C2D9B00BF93E3 /* libxml2.2.dylib */; };
 /* End PBXBuildFile section */
 
@@ -48,10 +61,25 @@
 		3A1022601753D0E3000A8617 /* MainView-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainView-568@2x.png"; sourceTree = "<group>"; };
 		3A1022611753D0E3000A8617 /* MainView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainView.png; sourceTree = "<group>"; };
 		3A1022621753D0E3000A8617 /* MainView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainView@2x.png"; sourceTree = "<group>"; };
+		3A41BE3E1757CBC2008D3113 /* Settings-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-Icon.png"; sourceTree = "<group>"; };
+		3A41BE401757D0C5008D3113 /* umbrella-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "umbrella-icon.png"; sourceTree = "<group>"; };
+		3A41BE421757D0F9008D3113 /* wind-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wind-icon.png"; sourceTree = "<group>"; };
+		3A41BE4417593D07008D3113 /* wunderground-logo-horiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wunderground-logo-horiz.png"; sourceTree = "<group>"; };
+		3A41BE461759435C008D3113 /* wunderground-logo-reg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wunderground-logo-reg.png"; sourceTree = "<group>"; };
+		3A41BE4817594419008D3113 /* wunderground-logo-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wunderground-logo-white.png"; sourceTree = "<group>"; };
+		3A41BE4A175D37F3008D3113 /* MainViewBlurred-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainViewBlurred-568@2x.png"; sourceTree = "<group>"; };
+		3A41BE4B175D37F4008D3113 /* MainViewBlurred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainViewBlurred.png; sourceTree = "<group>"; };
+		3A41BE4C175D37F4008D3113 /* MainViewBlurred@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainViewBlurred@2x.png"; sourceTree = "<group>"; };
+		3A41BE50175D3A7C008D3113 /* umbrella-icon-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "umbrella-icon-white.png"; sourceTree = "<group>"; };
+		3A41BE51175D3A7C008D3113 /* wind-icon-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wind-icon-white.png"; sourceTree = "<group>"; };
+		3A41BE54175E6663008D3113 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		3A41BE55175E6663008D3113 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		3A41BE5C176122C7008D3113 /* trail-conditions-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trail-conditions-list.png"; sourceTree = "<group>"; };
+		3A41BE6117616586008D3113 /* detail-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detail-arrow.png"; sourceTree = "<group>"; };
+		3A41BE6917626C1E008D3113 /* TrailConditionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailConditionsViewController.h; sourceTree = "<group>"; };
+		3A41BE6A17626C1E008D3113 /* TrailConditionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailConditionsViewController.m; sourceTree = "<group>"; };
 		3AA607E2172D70B000A7C20A /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
 		3AA607E3172D70B000A7C20A /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
-		3AA607E5172D70F500A7C20A /* SnowReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowReportViewController.h; sourceTree = "<group>"; };
-		3AA607E6172D70F500A7C20A /* SnowReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowReportViewController.m; sourceTree = "<group>"; };
 		3AD3E055173EACB500935923 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		3AD3E056173EACB500935923 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		3AD3E057173EACB500935923 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -98,8 +126,6 @@
 		3AE99FBB172C29F600BF93E3 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		3AE99FBC172C29F600BF93E3 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		3AE99FBD172C29F600BF93E3 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
-		3AE99FC1172C2A0D00BF93E3 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
-		3AE99FC2172C2A0D00BF93E3 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		3AE99FC4172C2D9B00BF93E3 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -123,8 +149,21 @@
 		3A1022661753D0EE000A8617 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3A41BE5C176122C7008D3113 /* trail-conditions-list.png */,
+				3A41BE6117616586008D3113 /* detail-arrow.png */,
+				3A41BE50175D3A7C008D3113 /* umbrella-icon-white.png */,
+				3A41BE51175D3A7C008D3113 /* wind-icon-white.png */,
+				3A41BE4A175D37F3008D3113 /* MainViewBlurred-568@2x.png */,
+				3A41BE4B175D37F4008D3113 /* MainViewBlurred.png */,
+				3A41BE4C175D37F4008D3113 /* MainViewBlurred@2x.png */,
+				3A41BE4817594419008D3113 /* wunderground-logo-white.png */,
+				3A41BE461759435C008D3113 /* wunderground-logo-reg.png */,
+				3A41BE4417593D07008D3113 /* wunderground-logo-horiz.png */,
 				3AE99F9E172C289B00BF93E3 /* Default.png */,
 				3AE99FA0172C289B00BF93E3 /* Default@2x.png */,
+				3A41BE3E1757CBC2008D3113 /* Settings-Icon.png */,
+				3A41BE421757D0F9008D3113 /* wind-icon.png */,
+				3A41BE401757D0C5008D3113 /* umbrella-icon.png */,
 				3AE99FB2172C29A800BF93E3 /* snowReportLaunchImage-568h@2x.png */,
 				3AE99FB3172C29A800BF93E3 /* snowReportLaunchImage.png */,
 				3AE99FB4172C29A800BF93E3 /* snowReportLaunchImage@2x.png */,
@@ -198,14 +237,14 @@
 				3AE99F9B172C289B00BF93E3 /* AppDelegate.h */,
 				3AE99F9C172C289B00BF93E3 /* AppDelegate.m */,
 				3AE99FA4172C289B00BF93E3 /* MainStoryboard.storyboard */,
-				3AA607E5172D70F500A7C20A /* SnowReportViewController.h */,
-				3AA607E6172D70F500A7C20A /* SnowReportViewController.m */,
-				3AA607E2172D70B000A7C20A /* WeatherViewController.h */,
-				3AA607E3172D70B000A7C20A /* WeatherViewController.m */,
 				3AE99FA7172C289B00BF93E3 /* ViewController.h */,
 				3AE99FA8172C289B00BF93E3 /* ViewController.m */,
-				3AE99FC1172C2A0D00BF93E3 /* Weather.h */,
-				3AE99FC2172C2A0D00BF93E3 /* Weather.m */,
+				3A41BE6917626C1E008D3113 /* TrailConditionsViewController.h */,
+				3A41BE6A17626C1E008D3113 /* TrailConditionsViewController.m */,
+				3AA607E2172D70B000A7C20A /* WeatherViewController.h */,
+				3AA607E3172D70B000A7C20A /* WeatherViewController.m */,
+				3A41BE54175E6663008D3113 /* InfoViewController.h */,
+				3A41BE55175E6663008D3113 /* InfoViewController.m */,
 				3AD3E054173EACB500935923 /* AFNetworking */,
 				3AE99F93172C289B00BF93E3 /* Supporting Files */,
 			);
@@ -292,6 +331,19 @@
 				3A1022631753D0E3000A8617 /* MainView-568@2x.png in Resources */,
 				3A1022641753D0E3000A8617 /* MainView.png in Resources */,
 				3A1022651753D0E3000A8617 /* MainView@2x.png in Resources */,
+				3A41BE3F1757CBC2008D3113 /* Settings-Icon.png in Resources */,
+				3A41BE411757D0C5008D3113 /* umbrella-icon.png in Resources */,
+				3A41BE431757D0F9008D3113 /* wind-icon.png in Resources */,
+				3A41BE4517593D07008D3113 /* wunderground-logo-horiz.png in Resources */,
+				3A41BE471759435C008D3113 /* wunderground-logo-reg.png in Resources */,
+				3A41BE4917594419008D3113 /* wunderground-logo-white.png in Resources */,
+				3A41BE4D175D37F4008D3113 /* MainViewBlurred-568@2x.png in Resources */,
+				3A41BE4E175D37F4008D3113 /* MainViewBlurred.png in Resources */,
+				3A41BE4F175D37F4008D3113 /* MainViewBlurred@2x.png in Resources */,
+				3A41BE52175D3A7C008D3113 /* umbrella-icon-white.png in Resources */,
+				3A41BE53175D3A7C008D3113 /* wind-icon-white.png in Resources */,
+				3A41BE5D176122C7008D3113 /* trail-conditions-list.png in Resources */,
+				3A41BE6217616586008D3113 /* detail-arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,9 +360,7 @@
 				3AE99FBE172C29F600BF93E3 /* TFHpple.m in Sources */,
 				3AE99FBF172C29F600BF93E3 /* TFHppleElement.m in Sources */,
 				3AE99FC0172C29F600BF93E3 /* XPathQuery.m in Sources */,
-				3AE99FC3172C2A0D00BF93E3 /* Weather.m in Sources */,
 				3AA607E4172D70B000A7C20A /* WeatherViewController.m in Sources */,
-				3AA607E7172D70F500A7C20A /* SnowReportViewController.m in Sources */,
 				3AD3E068173EACB500935923 /* AFHTTPClient.m in Sources */,
 				3AD3E069173EACB500935923 /* AFHTTPRequestOperation.m in Sources */,
 				3AD3E06A173EACB500935923 /* AFImageRequestOperation.m in Sources */,
@@ -320,6 +370,8 @@
 				3AD3E06E173EACB500935923 /* AFURLConnectionOperation.m in Sources */,
 				3AD3E06F173EACB500935923 /* AFXMLRequestOperation.m in Sources */,
 				3AD3E070173EACB500935923 /* UIImageView+AFNetworking.m in Sources */,
+				3A41BE56175E6663008D3113 /* InfoViewController.m in Sources */,
+				3A41BE6B17626C1E008D3113 /* TrailConditionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
