@@ -874,6 +874,81 @@
         <image name="wind-icon-white.png" width="30" height="30"/>
         <image name="wunderground-logo-white.png" width="1104" height="658"/>
     </resources>
+    <classes>
+        <class className="InfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="infoText1" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="infoText2" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="infoText3" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TrailConditionsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TrailConditionsViewController.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="conditionsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="conditionsUIImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="currentTemp" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="date" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="kmOpenLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="skateGroomedLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="trackSetLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="WeatherViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WeatherViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="day1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day1HiLow" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day1Img" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="day1Pop" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day1Wind" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day2HiLow" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day2Img" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="day2Pop" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day2Wind" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day3HiLow" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day3Img" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="day3Pop" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="day3Wind" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailConditions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailHigh" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailLow" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailPop" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailTemp" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailWeatherImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="detailWind" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour1Img" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="hour1Pop" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour1Temp" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour1Wind" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour2Img" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="hour2Pop" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour2Temp" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour2Wind" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour3Img" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="hour3Pop" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour3Temp" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour3Wind" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour4" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour4Img" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="hour4Pop" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour4Temp" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hour4Wind" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -24,9 +24,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     NSString *weatherURL = @"http://api.wunderground.com/api/0f26d3b3dcb3da08/conditions/forecast/hourly/q/05827.json";
     NSString *snowReportURL = @"http://craftsbury.com/skiing/nordic_center/snow_report.htm";
     
+    // Process data from API and web
     [self parseJSONFileAtURL:weatherURL];
     [self parseHTMLFileAtURL:snowReportURL];
 
@@ -34,6 +36,7 @@
 
 - (void)parseJSONFileAtURL:(NSString *)URL
 {
+    // Process data for weather forecast
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URL]];
     
@@ -53,6 +56,8 @@
 
 - (void) storeWeatherData{
     
+    // Store data so it can be used in subsequent view controller without another call to API
+    
     NSDictionary *mainViewElements = [self.weatherElementsDictionary objectForKey:@"current_observation"];
     
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[[mainViewElements valueForKey:@"icon_url"] stringByReplacingOccurrencesOfString:@"/k/" withString:@"/i/"]]];
@@ -69,14 +74,13 @@
 
 
 - (void)parseHTMLFileAtURL:(NSString *)URL{
-    // ************************************ SNOW REPORT MAIN HTML PARSER ************************************
+    // Process data for snow report and trail conditions
     
     NSData *snowReportData = [NSData dataWithContentsOfURL:[NSURL URLWithString:URL]];
     
     self.snowReportParser = [TFHpple hppleWithHTMLData:snowReportData];
     
     NSArray *reportElements = [self.snowReportParser searchWithXPathQuery:@"//div[@id='kilometers-open']/p/span[@class='data']"];
-
     
     NSMutableArray *reportElementsData = [[NSMutableArray alloc] initWithCapacity:0];
     int index = 0;
@@ -88,15 +92,17 @@
             reportElementsData[index] = [element text];
             NSLog(@"%@", reportElementsData[index]);
             
-            // not sure what the key is at the moment...
-            // self.trackSetLabel.text = [[element objectForKey:@"]]
+            // not sure what the key is at the moment...non-existant during off-season
+            // self.trackSetLabel.text = [[element objectForKey:@""]]
         }
         index++;
     }
     
+    
     // Do the same thing for trail conditions:
     
-    // NEED TO FIGURE OUT CLASS FOR OPEN TRAILS. THE FOLLOWING ONLY WORKS FOR CLOSED TRAILS
+    // NEED TO FIGURE OUT CLASS FOR OPEN TRAILS. THE FOLLOWING ONLY WORKS FOR CLOSED TRAILS (off-season)
+    
     NSArray *trailConditions = [self.snowReportParser searchWithXPathQuery:@"//td[@class='trail-closed']"];
     
     NSMutableArray *trailConditionsData = [[NSMutableArray alloc] initWithCapacity:0];
@@ -108,7 +114,7 @@
         idx++;
     }
     
-    self.trailConditionsArray = trailConditionsData;
+    self.trailConditionsArray = trailConditionsData; // Pass this to TrailConditionsViewController
     
     self.kmOpenLabel.text = reportElementsData[0];
     self.trackSetLabel.text = reportElementsData[1];

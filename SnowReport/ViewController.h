@@ -26,10 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *trackSetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *skateGroomedLabel;
 
-// *************** DETAIL WEATHER LABELS **************
-
-
-
+// Some methods
 - (void) parseJSONFileAtURL:(NSString *)URL;
 
 - (void) parseHTMLFileAtURL:(NSString *)URL;
