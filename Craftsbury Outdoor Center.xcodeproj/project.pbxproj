@@ -14,14 +14,29 @@
 		3A0E5ADA184BBB1600D02E5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E5AD9184BBB1600D02E5B /* main.m */; };
 		3A0E5ADE184BBB1600D02E5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E5ADD184BBB1600D02E5B /* AppDelegate.m */; };
 		3A0E5AE1184BBB1600D02E5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0E5ADF184BBB1600D02E5B /* Main.storyboard */; };
-		3A0E5AE4184BBB1600D02E5B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E5AE3184BBB1600D02E5B /* FirstViewController.m */; };
-		3A0E5AE7184BBB1600D02E5B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E5AE6184BBB1600D02E5B /* SecondViewController.m */; };
+		3A0E5AE4184BBB1600D02E5B /* CurrentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E5AE3184BBB1600D02E5B /* CurrentView.m */; };
+		3A0E5AE7184BBB1600D02E5B /* ForecastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E5AE6184BBB1600D02E5B /* ForecastView.m */; };
 		3A0E5AE9184BBB1600D02E5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0E5AE8184BBB1600D02E5B /* Images.xcassets */; };
 		3A0E5AF0184BBB1600D02E5B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0E5AEF184BBB1600D02E5B /* XCTest.framework */; };
 		3A0E5AF1184BBB1600D02E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0E5ACD184BBB1600D02E5B /* Foundation.framework */; };
 		3A0E5AF2184BBB1600D02E5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0E5AD1184BBB1600D02E5B /* UIKit.framework */; };
 		3A0E5AFA184BBB1600D02E5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A0E5AF8184BBB1600D02E5B /* InfoPlist.strings */; };
 		3A0E5AFC184BBB1600D02E5B /* Craftsbury_Outdoor_CenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E5AFB184BBB1600D02E5B /* Craftsbury_Outdoor_CenterTests.m */; };
+		3A0E5B07184BBE4500D02E5B /* TrailStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E5B06184BBE4500D02E5B /* TrailStatusView.m */; };
+		3A0E5B0D184BBEB700D02E5B /* InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E5B0C184BBEB700D02E5B /* InfoView.m */; };
+		3A4CF29D184C09D500B12295 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CF297184C09D500B12295 /* Reachability.m */; };
+		3A4CF29E184C09D500B12295 /* Observation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CF299184C09D500B12295 /* Observation.m */; };
+		3A4CF29F184C09D500B12295 /* WeatherRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CF29C184C09D500B12295 /* WeatherRequest.m */; };
+		3A4CF2A6184D0C8E00B12295 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CF2A0184D0C8E00B12295 /* TFHppleElement.m */; };
+		3A4CF2A7184D0C8E00B12295 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CF2A2184D0C8E00B12295 /* XPathQuery.m */; };
+		3A4CF2A8184D0C8E00B12295 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CF2A4184D0C8E00B12295 /* TFHpple.m */; };
+		3A4CF2AB184D143100B12295 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CF2AA184D143100B12295 /* libxml2.2.dylib */; };
+		3A4CF2AD184D143F00B12295 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CF2AC184D143F00B12295 /* MobileCoreServices.framework */; };
+		3A4CF2AF184D145700B12295 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CF2AE184D145700B12295 /* SystemConfiguration.framework */; };
+		3A4CF2B1184D146200B12295 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CF2B0184D146200B12295 /* libxml2.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
+		3A4CF2B3184D147500B12295 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CF2B2184D147500B12295 /* QuartzCore.framework */; };
+		3A4CF2B9184D5D2400B12295 /* TrailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CF2B8184D5D2400B12295 /* TrailCell.m */; };
+		E3AB6488BC4C441183543AF7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A2A7E09A854B8F810C692E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +61,42 @@
 		3A0E5ADC184BBB1600D02E5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A0E5ADD184BBB1600D02E5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3A0E5AE0184BBB1600D02E5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3A0E5AE2184BBB1600D02E5B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		3A0E5AE3184BBB1600D02E5B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		3A0E5AE5184BBB1600D02E5B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		3A0E5AE6184BBB1600D02E5B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		3A0E5AE2184BBB1600D02E5B /* CurrentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentView.h; sourceTree = "<group>"; };
+		3A0E5AE3184BBB1600D02E5B /* CurrentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentView.m; sourceTree = "<group>"; };
+		3A0E5AE5184BBB1600D02E5B /* ForecastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastView.h; sourceTree = "<group>"; };
+		3A0E5AE6184BBB1600D02E5B /* ForecastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastView.m; sourceTree = "<group>"; };
 		3A0E5AE8184BBB1600D02E5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3A0E5AEE184BBB1600D02E5B /* Craftsbury Outdoor CenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Craftsbury Outdoor CenterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0E5AEF184BBB1600D02E5B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3A0E5AF7184BBB1600D02E5B /* Craftsbury Outdoor CenterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Craftsbury Outdoor CenterTests-Info.plist"; sourceTree = "<group>"; };
 		3A0E5AF9184BBB1600D02E5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A0E5AFB184BBB1600D02E5B /* Craftsbury_Outdoor_CenterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Craftsbury_Outdoor_CenterTests.m; sourceTree = "<group>"; };
+		3A0E5B05184BBE4500D02E5B /* TrailStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailStatusView.h; sourceTree = "<group>"; };
+		3A0E5B06184BBE4500D02E5B /* TrailStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailStatusView.m; sourceTree = "<group>"; };
+		3A0E5B0B184BBEB700D02E5B /* InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoView.h; sourceTree = "<group>"; };
+		3A0E5B0C184BBEB700D02E5B /* InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoView.m; sourceTree = "<group>"; };
+		3A4CF296184C09D500B12295 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		3A4CF297184C09D500B12295 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		3A4CF298184C09D500B12295 /* Observation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observation.h; sourceTree = "<group>"; };
+		3A4CF299184C09D500B12295 /* Observation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Observation.m; sourceTree = "<group>"; };
+		3A4CF29A184C09D500B12295 /* WeatherAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherAPIKey.h; sourceTree = "<group>"; };
+		3A4CF29B184C09D500B12295 /* WeatherRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherRequest.h; sourceTree = "<group>"; };
+		3A4CF29C184C09D500B12295 /* WeatherRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherRequest.m; sourceTree = "<group>"; };
+		3A4CF2A0184D0C8E00B12295 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		3A4CF2A1184D0C8E00B12295 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		3A4CF2A2184D0C8E00B12295 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		3A4CF2A3184D0C8E00B12295 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		3A4CF2A4184D0C8E00B12295 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		3A4CF2A5184D0C8E00B12295 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		3A4CF2AA184D143100B12295 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		3A4CF2AC184D143F00B12295 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3A4CF2AE184D145700B12295 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3A4CF2B0184D146200B12295 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		3A4CF2B2184D147500B12295 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3A4CF2B7184D5D2400B12295 /* TrailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailCell.h; sourceTree = "<group>"; };
+		3A4CF2B8184D5D2400B12295 /* TrailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailCell.m; sourceTree = "<group>"; };
+		65A2A7E09A854B8F810C692E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD39679567FD4B6783A4E5B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +104,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4CF2B3184D147500B12295 /* QuartzCore.framework in Frameworks */,
+				3A4CF2B1184D146200B12295 /* libxml2.dylib in Frameworks */,
+				3A4CF2AB184D143100B12295 /* libxml2.2.dylib in Frameworks */,
+				3A4CF2AF184D145700B12295 /* SystemConfiguration.framework in Frameworks */,
 				3A0E5AD0184BBB1600D02E5B /* CoreGraphics.framework in Frameworks */,
+				3A4CF2AD184D143F00B12295 /* MobileCoreServices.framework in Frameworks */,
 				3A0E5AD2184BBB1600D02E5B /* UIKit.framework in Frameworks */,
 				3A0E5ACE184BBB1600D02E5B /* Foundation.framework in Frameworks */,
+				E3AB6488BC4C441183543AF7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +136,7 @@
 				3A0E5AF5184BBB1600D02E5B /* Craftsbury Outdoor CenterTests */,
 				3A0E5ACC184BBB1600D02E5B /* Frameworks */,
 				3A0E5ACB184BBB1500D02E5B /* Products */,
+				FD39679567FD4B6783A4E5B1 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,10 +152,16 @@
 		3A0E5ACC184BBB1600D02E5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A4CF2B2184D147500B12295 /* QuartzCore.framework */,
+				3A4CF2B0184D146200B12295 /* libxml2.dylib */,
+				3A4CF2AA184D143100B12295 /* libxml2.2.dylib */,
+				3A4CF2AE184D145700B12295 /* SystemConfiguration.framework */,
+				3A4CF2AC184D143F00B12295 /* MobileCoreServices.framework */,
 				3A0E5ACD184BBB1600D02E5B /* Foundation.framework */,
 				3A0E5ACF184BBB1600D02E5B /* CoreGraphics.framework */,
 				3A0E5AD1184BBB1600D02E5B /* UIKit.framework */,
 				3A0E5AEF184BBB1600D02E5B /* XCTest.framework */,
+				65A2A7E09A854B8F810C692E /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,11 +172,16 @@
 				3A0E5ADC184BBB1600D02E5B /* AppDelegate.h */,
 				3A0E5ADD184BBB1600D02E5B /* AppDelegate.m */,
 				3A0E5ADF184BBB1600D02E5B /* Main.storyboard */,
-				3A0E5AE2184BBB1600D02E5B /* FirstViewController.h */,
-				3A0E5AE3184BBB1600D02E5B /* FirstViewController.m */,
-				3A0E5AE5184BBB1600D02E5B /* SecondViewController.h */,
-				3A0E5AE6184BBB1600D02E5B /* SecondViewController.m */,
+				3A0E5AE2184BBB1600D02E5B /* CurrentView.h */,
+				3A0E5AE3184BBB1600D02E5B /* CurrentView.m */,
+				3A0E5AE5184BBB1600D02E5B /* ForecastView.h */,
+				3A0E5AE6184BBB1600D02E5B /* ForecastView.m */,
+				3A0E5B05184BBE4500D02E5B /* TrailStatusView.h */,
+				3A0E5B06184BBE4500D02E5B /* TrailStatusView.m */,
+				3A0E5B0B184BBEB700D02E5B /* InfoView.h */,
+				3A0E5B0C184BBEB700D02E5B /* InfoView.m */,
 				3A0E5AE8184BBB1600D02E5B /* Images.xcassets */,
+				3A4CF295184C099500B12295 /* Resources */,
 				3A0E5AD4184BBB1600D02E5B /* Supporting Files */,
 			);
 			path = "Craftsbury Outdoor Center";
@@ -157,6 +216,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3A4CF295184C099500B12295 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CF296184C09D500B12295 /* Reachability.h */,
+				3A4CF297184C09D500B12295 /* Reachability.m */,
+				3A4CF298184C09D500B12295 /* Observation.h */,
+				3A4CF299184C09D500B12295 /* Observation.m */,
+				3A4CF29A184C09D500B12295 /* WeatherAPIKey.h */,
+				3A4CF29B184C09D500B12295 /* WeatherRequest.h */,
+				3A4CF29C184C09D500B12295 /* WeatherRequest.m */,
+				3A4CF2B7184D5D2400B12295 /* TrailCell.h */,
+				3A4CF2B8184D5D2400B12295 /* TrailCell.m */,
+				3A4CF2A9184D0C9E00B12295 /* HTMLParsing */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3A4CF2A9184D0C9E00B12295 /* HTMLParsing */ = {
+			isa = PBXGroup;
+			children = (
+				3A4CF2A0184D0C8E00B12295 /* TFHppleElement.m */,
+				3A4CF2A1184D0C8E00B12295 /* XPathQuery.h */,
+				3A4CF2A2184D0C8E00B12295 /* XPathQuery.m */,
+				3A4CF2A3184D0C8E00B12295 /* TFHpple.h */,
+				3A4CF2A4184D0C8E00B12295 /* TFHpple.m */,
+				3A4CF2A5184D0C8E00B12295 /* TFHppleElement.h */,
+			);
+			name = HTMLParsing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A0E5AFF184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "Craftsbury Outdoor Center" */;
 			buildPhases = (
+				BF33EDDD62D7489B9458DA3D /* Check Pods Manifest.lock */,
 				3A0E5AC6184BBB1500D02E5B /* Sources */,
 				3A0E5AC7184BBB1500D02E5B /* Frameworks */,
 				3A0E5AC8184BBB1500D02E5B /* Resources */,
+				BF491B006BBD4C588FE1634B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,14 +340,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BF33EDDD62D7489B9458DA3D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF491B006BBD4C588FE1634B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A0E5AC6184BBB1500D02E5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A0E5AE7184BBB1600D02E5B /* SecondViewController.m in Sources */,
+				3A0E5AE7184BBB1600D02E5B /* ForecastView.m in Sources */,
+				3A0E5B07184BBE4500D02E5B /* TrailStatusView.m in Sources */,
+				3A0E5B0D184BBEB700D02E5B /* InfoView.m in Sources */,
+				3A4CF29D184C09D500B12295 /* Reachability.m in Sources */,
+				3A4CF2A7184D0C8E00B12295 /* XPathQuery.m in Sources */,
+				3A4CF2A6184D0C8E00B12295 /* TFHppleElement.m in Sources */,
+				3A4CF29F184C09D500B12295 /* WeatherRequest.m in Sources */,
+				3A4CF2A8184D0C8E00B12295 /* TFHpple.m in Sources */,
+				3A4CF2B9184D5D2400B12295 /* TrailCell.m in Sources */,
+				3A4CF29E184C09D500B12295 /* Observation.m in Sources */,
 				3A0E5ADE184BBB1600D02E5B /* AppDelegate.m in Sources */,
-				3A0E5AE4184BBB1600D02E5B /* FirstViewController.m in Sources */,
+				3A0E5AE4184BBB1600D02E5B /* CurrentView.m in Sources */,
 				3A0E5ADA184BBB1600D02E5B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +473,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					$SDK_DIR/usr/include/libxml2,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -373,6 +511,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					$SDK_DIR/usr/include/libxml2,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -381,11 +524,19 @@
 		};
 		3A0E5B00184BBB1600D02E5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD39679567FD4B6783A4E5B1 /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/Craftsbury Outdoor Center-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/SVProgressHUD\"",
+					$SDK_DIR/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "Craftsbury Outdoor Center/Craftsbury Outdoor Center-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -394,11 +545,19 @@
 		};
 		3A0E5B01184BBB1600D02E5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD39679567FD4B6783A4E5B1 /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/Craftsbury Outdoor Center-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/SVProgressHUD\"",
+					$SDK_DIR/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "Craftsbury Outdoor Center/Craftsbury Outdoor Center-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -466,6 +625,7 @@
 				3A0E5B01184BBB1600D02E5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A0E5B02184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "Craftsbury Outdoor CenterTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +634,7 @@
 				3A0E5B04184BBB1600D02E5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
