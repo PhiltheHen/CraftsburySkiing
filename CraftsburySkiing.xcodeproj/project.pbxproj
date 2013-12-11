@@ -50,25 +50,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A0E5ACA184BBB1500D02E5B /* Craftsbury Outdoor Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Craftsbury Outdoor Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0E5ACA184BBB1500D02E5B /* CraftsburySkiing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CraftsburySkiing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0E5ACD184BBB1600D02E5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A0E5ACF184BBB1600D02E5B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3A0E5AD1184BBB1600D02E5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		3A0E5AD5184BBB1600D02E5B /* Craftsbury Outdoor Center-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Craftsbury Outdoor Center-Info.plist"; sourceTree = "<group>"; };
+		3A0E5AD5184BBB1600D02E5B /* CraftsburySkiing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CraftsburySkiing-Info.plist"; sourceTree = "<group>"; };
 		3A0E5AD7184BBB1600D02E5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A0E5AD9184BBB1600D02E5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3A0E5ADB184BBB1600D02E5B /* Craftsbury Outdoor Center-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Craftsbury Outdoor Center-Prefix.pch"; sourceTree = "<group>"; };
-		3A0E5ADC184BBB1600D02E5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3A0E5ADD184BBB1600D02E5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3A0E5ADB184BBB1600D02E5B /* CraftsburySkiing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CraftsburySkiing-Prefix.pch"; sourceTree = "<group>"; };
+		3A0E5ADC184BBB1600D02E5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Craftsbury Outdoor Center/AppDelegate.h"; sourceTree = "<group>"; };
+		3A0E5ADD184BBB1600D02E5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Craftsbury Outdoor Center/AppDelegate.m"; sourceTree = "<group>"; };
 		3A0E5AE0184BBB1600D02E5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A0E5AE2184BBB1600D02E5B /* CurrentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentView.h; sourceTree = "<group>"; };
 		3A0E5AE3184BBB1600D02E5B /* CurrentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentView.m; sourceTree = "<group>"; };
 		3A0E5AE5184BBB1600D02E5B /* ForecastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecastView.h; sourceTree = "<group>"; };
 		3A0E5AE6184BBB1600D02E5B /* ForecastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForecastView.m; sourceTree = "<group>"; };
 		3A0E5AE8184BBB1600D02E5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3A0E5AEE184BBB1600D02E5B /* Craftsbury Outdoor CenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Craftsbury Outdoor CenterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0E5AEE184BBB1600D02E5B /* CraftsburySkiingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CraftsburySkiingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0E5AEF184BBB1600D02E5B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3A0E5AF7184BBB1600D02E5B /* Craftsbury Outdoor CenterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Craftsbury Outdoor CenterTests-Info.plist"; sourceTree = "<group>"; };
+		3A0E5AF7184BBB1600D02E5B /* CraftsburySkiingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CraftsburySkiingTests-Info.plist"; sourceTree = "<group>"; };
 		3A0E5AF9184BBB1600D02E5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A0E5AFB184BBB1600D02E5B /* Craftsbury_Outdoor_CenterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Craftsbury_Outdoor_CenterTests.m; sourceTree = "<group>"; };
 		3A0E5B05184BBE4500D02E5B /* TrailStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailStatusView.h; sourceTree = "<group>"; };
@@ -132,8 +132,11 @@
 		3A0E5AC1184BBB1500D02E5B = {
 			isa = PBXGroup;
 			children = (
-				3A0E5AD3184BBB1600D02E5B /* Craftsbury Outdoor Center */,
-				3A0E5AF5184BBB1600D02E5B /* Craftsbury Outdoor CenterTests */,
+				3AD264A31850D81F00F801A9 /* Storyboard */,
+				3A0E5AD3184BBB1600D02E5B /* Tab Bar Views */,
+				3A4CF295184C099500B12295 /* Resources */,
+				3A0E5AD4184BBB1600D02E5B /* Supporting Files */,
+				3A0E5AF5184BBB1600D02E5B /* CraftsburyTests */,
 				3A0E5ACC184BBB1600D02E5B /* Frameworks */,
 				3A0E5ACB184BBB1500D02E5B /* Products */,
 				FD39679567FD4B6783A4E5B1 /* Pods.xcconfig */,
@@ -143,8 +146,8 @@
 		3A0E5ACB184BBB1500D02E5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A0E5ACA184BBB1500D02E5B /* Craftsbury Outdoor Center.app */,
-				3A0E5AEE184BBB1600D02E5B /* Craftsbury Outdoor CenterTests.xctest */,
+				3A0E5ACA184BBB1500D02E5B /* CraftsburySkiing.app */,
+				3A0E5AEE184BBB1600D02E5B /* CraftsburySkiingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,12 +169,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3A0E5AD3184BBB1600D02E5B /* Craftsbury Outdoor Center */ = {
+		3A0E5AD3184BBB1600D02E5B /* Tab Bar Views */ = {
 			isa = PBXGroup;
 			children = (
-				3A0E5ADC184BBB1600D02E5B /* AppDelegate.h */,
-				3A0E5ADD184BBB1600D02E5B /* AppDelegate.m */,
-				3A0E5ADF184BBB1600D02E5B /* Main.storyboard */,
 				3A0E5AE2184BBB1600D02E5B /* CurrentView.h */,
 				3A0E5AE3184BBB1600D02E5B /* CurrentView.m */,
 				3A0E5AE5184BBB1600D02E5B /* ForecastView.h */,
@@ -180,37 +180,37 @@
 				3A0E5B06184BBE4500D02E5B /* TrailStatusView.m */,
 				3A0E5B0B184BBEB700D02E5B /* InfoView.h */,
 				3A0E5B0C184BBEB700D02E5B /* InfoView.m */,
-				3A0E5AE8184BBB1600D02E5B /* Images.xcassets */,
-				3A4CF295184C099500B12295 /* Resources */,
-				3A0E5AD4184BBB1600D02E5B /* Supporting Files */,
 			);
+			name = "Tab Bar Views";
 			path = "Craftsbury Outdoor Center";
 			sourceTree = "<group>";
 		};
 		3A0E5AD4184BBB1600D02E5B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3A0E5AD5184BBB1600D02E5B /* Craftsbury Outdoor Center-Info.plist */,
+				3A0E5AD5184BBB1600D02E5B /* CraftsburySkiing-Info.plist */,
 				3A0E5AD6184BBB1600D02E5B /* InfoPlist.strings */,
 				3A0E5AD9184BBB1600D02E5B /* main.m */,
-				3A0E5ADB184BBB1600D02E5B /* Craftsbury Outdoor Center-Prefix.pch */,
+				3A0E5ADB184BBB1600D02E5B /* CraftsburySkiing-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = "Craftsbury Outdoor Center";
 			sourceTree = "<group>";
 		};
-		3A0E5AF5184BBB1600D02E5B /* Craftsbury Outdoor CenterTests */ = {
+		3A0E5AF5184BBB1600D02E5B /* CraftsburyTests */ = {
 			isa = PBXGroup;
 			children = (
 				3A0E5AFB184BBB1600D02E5B /* Craftsbury_Outdoor_CenterTests.m */,
 				3A0E5AF6184BBB1600D02E5B /* Supporting Files */,
 			);
+			name = CraftsburyTests;
 			path = "Craftsbury Outdoor CenterTests";
 			sourceTree = "<group>";
 		};
 		3A0E5AF6184BBB1600D02E5B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3A0E5AF7184BBB1600D02E5B /* Craftsbury Outdoor CenterTests-Info.plist */,
+				3A0E5AF7184BBB1600D02E5B /* CraftsburySkiingTests-Info.plist */,
 				3A0E5AF8184BBB1600D02E5B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -219,6 +219,7 @@
 		3A4CF295184C099500B12295 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3A0E5AE8184BBB1600D02E5B /* Images.xcassets */,
 				3A4CF296184C09D500B12295 /* Reachability.h */,
 				3A4CF297184C09D500B12295 /* Reachability.m */,
 				3A4CF298184C09D500B12295 /* Observation.h */,
@@ -231,6 +232,7 @@
 				3A4CF2A9184D0C9E00B12295 /* HTMLParsing */,
 			);
 			name = Resources;
+			path = "Craftsbury Outdoor Center";
 			sourceTree = "<group>";
 		};
 		3A4CF2A9184D0C9E00B12295 /* HTMLParsing */ = {
@@ -246,12 +248,22 @@
 			name = HTMLParsing;
 			sourceTree = "<group>";
 		};
+		3AD264A31850D81F00F801A9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3A0E5ADC184BBB1600D02E5B /* AppDelegate.h */,
+				3A0E5ADD184BBB1600D02E5B /* AppDelegate.m */,
+				3A0E5ADF184BBB1600D02E5B /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A0E5AC9184BBB1500D02E5B /* Craftsbury Outdoor Center */ = {
+		3A0E5AC9184BBB1500D02E5B /* CraftsburySkiing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A0E5AFF184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "Craftsbury Outdoor Center" */;
+			buildConfigurationList = 3A0E5AFF184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "CraftsburySkiing" */;
 			buildPhases = (
 				BF33EDDD62D7489B9458DA3D /* Check Pods Manifest.lock */,
 				3A0E5AC6184BBB1500D02E5B /* Sources */,
@@ -263,14 +275,14 @@
 			);
 			dependencies = (
 			);
-			name = "Craftsbury Outdoor Center";
+			name = CraftsburySkiing;
 			productName = "Craftsbury Outdoor Center";
-			productReference = 3A0E5ACA184BBB1500D02E5B /* Craftsbury Outdoor Center.app */;
+			productReference = 3A0E5ACA184BBB1500D02E5B /* CraftsburySkiing.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A0E5AED184BBB1600D02E5B /* Craftsbury Outdoor CenterTests */ = {
+		3A0E5AED184BBB1600D02E5B /* CraftsburySkiingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A0E5B02184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "Craftsbury Outdoor CenterTests" */;
+			buildConfigurationList = 3A0E5B02184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "CraftsburySkiingTests" */;
 			buildPhases = (
 				3A0E5AEA184BBB1600D02E5B /* Sources */,
 				3A0E5AEB184BBB1600D02E5B /* Frameworks */,
@@ -281,9 +293,9 @@
 			dependencies = (
 				3A0E5AF4184BBB1600D02E5B /* PBXTargetDependency */,
 			);
-			name = "Craftsbury Outdoor CenterTests";
+			name = CraftsburySkiingTests;
 			productName = "Craftsbury Outdoor CenterTests";
-			productReference = 3A0E5AEE184BBB1600D02E5B /* Craftsbury Outdoor CenterTests.xctest */;
+			productReference = 3A0E5AEE184BBB1600D02E5B /* CraftsburySkiingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -300,7 +312,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3A0E5AC5184BBB1500D02E5B /* Build configuration list for PBXProject "Craftsbury Outdoor Center" */;
+			buildConfigurationList = 3A0E5AC5184BBB1500D02E5B /* Build configuration list for PBXProject "CraftsburySkiing" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -313,8 +325,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A0E5AC9184BBB1500D02E5B /* Craftsbury Outdoor Center */,
-				3A0E5AED184BBB1600D02E5B /* Craftsbury Outdoor CenterTests */,
+				3A0E5AC9184BBB1500D02E5B /* CraftsburySkiing */,
+				3A0E5AED184BBB1600D02E5B /* CraftsburySkiingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -407,7 +419,7 @@
 /* Begin PBXTargetDependency section */
 		3A0E5AF4184BBB1600D02E5B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A0E5AC9184BBB1500D02E5B /* Craftsbury Outdoor Center */;
+			target = 3A0E5AC9184BBB1500D02E5B /* CraftsburySkiing */;
 			targetProxy = 3A0E5AF3184BBB1600D02E5B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -427,6 +439,7 @@
 				3A0E5AE0184BBB1600D02E5B /* Base */,
 			);
 			name = Main.storyboard;
+			path = "Craftsbury Outdoor Center";
 			sourceTree = "<group>";
 		};
 		3A0E5AF8184BBB1600D02E5B /* InfoPlist.strings */ = {
@@ -530,15 +543,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/Craftsbury Outdoor Center-Prefix.pch";
+				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/CraftsburySkiing-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"${PODS_ROOT}/Headers\"",
 					"\"${PODS_ROOT}/Headers/AFNetworking\"",
 					"\"${PODS_ROOT}/Headers/SVProgressHUD\"",
 					$SDK_DIR/usr/include/libxml2,
 				);
-				INFOPLIST_FILE = "Craftsbury Outdoor Center/Craftsbury Outdoor Center-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Craftsbury Outdoor Center/CraftsburySkiing-Info.plist";
+				PRODUCT_NAME = CraftsburySkiing;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -551,15 +564,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/Craftsbury Outdoor Center-Prefix.pch";
+				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/CraftsburySkiing-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"${PODS_ROOT}/Headers\"",
 					"\"${PODS_ROOT}/Headers/AFNetworking\"",
 					"\"${PODS_ROOT}/Headers/SVProgressHUD\"",
 					$SDK_DIR/usr/include/libxml2,
 				);
-				INFOPLIST_FILE = "Craftsbury Outdoor Center/Craftsbury Outdoor Center-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Craftsbury Outdoor Center/CraftsburySkiing-Info.plist";
+				PRODUCT_NAME = CraftsburySkiing;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -580,8 +593,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Craftsbury Outdoor CenterTests/Craftsbury Outdoor CenterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Craftsbury Outdoor CenterTests/CraftsburySkiingTests-Info.plist";
+				PRODUCT_NAME = CraftsburySkiingTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -599,8 +612,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/Craftsbury Outdoor Center-Prefix.pch";
-				INFOPLIST_FILE = "Craftsbury Outdoor CenterTests/Craftsbury Outdoor CenterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Craftsbury Outdoor CenterTests/CraftsburySkiingTests-Info.plist";
+				PRODUCT_NAME = CraftsburySkiingTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -609,7 +622,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A0E5AC5184BBB1500D02E5B /* Build configuration list for PBXProject "Craftsbury Outdoor Center" */ = {
+		3A0E5AC5184BBB1500D02E5B /* Build configuration list for PBXProject "CraftsburySkiing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A0E5AFD184BBB1600D02E5B /* Debug */,
@@ -618,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A0E5AFF184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "Craftsbury Outdoor Center" */ = {
+		3A0E5AFF184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "CraftsburySkiing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A0E5B00184BBB1600D02E5B /* Debug */,
@@ -627,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A0E5B02184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "Craftsbury Outdoor CenterTests" */ = {
+		3A0E5B02184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "CraftsburySkiingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A0E5B03184BBB1600D02E5B /* Debug */,

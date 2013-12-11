@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface InfoView : UIViewController
 
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *unitsSegment;
 
--(IBAction)changeUnits;
+-(IBAction)changeUnits:(UISegmentedControl *)sender;
 
 @end

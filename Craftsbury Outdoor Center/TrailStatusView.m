@@ -23,10 +23,14 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -87,6 +91,7 @@
         
         NSString *cellTitle = [NSString stringWithFormat:@"%@ (%@)", [trailNames objectAtIndex:indexPath.row], [trailLength objectAtIndex:indexPath.row]];
         cell.trailNameLabel.text = cellTitle;
+        cell.trailNameLabel.adjustsFontSizeToFitWidth = YES;
         
         NSString *cellRightDetail = [trailStatus objectAtIndex:indexPath.row];
         

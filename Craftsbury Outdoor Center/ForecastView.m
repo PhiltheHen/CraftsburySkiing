@@ -18,12 +18,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     AppDelegate *delegate = UIAppDelegate;
     
     // if data exists, populate page
-    if (delegate.completeWeatherData)
+    if (delegate.completeWeatherData){
         [self updateWeatherDetailUI];
+    }
+    
     
 }
 
@@ -34,6 +35,7 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
+    
     AppDelegate *delegate = UIAppDelegate;
     
     // if data exists, populate page
@@ -41,6 +43,7 @@
         [self checkIfUpdateNeeded];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppSettingsChanged:) name:@"MyAppSettingsChanged" object:nil];
     }
+    
 }
 
 - (void) checkIfUpdateNeeded

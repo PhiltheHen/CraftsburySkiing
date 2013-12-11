@@ -22,17 +22,14 @@
 {
     [super viewDidLoad];
     
-        
-    __weak CurrentView *weakSelf = self;
-    
     // check for internet connection
     
-    weakSelf.internetReachable = [Reachability reachabilityForInternetConnection];
+    self.internetReachable = [Reachability reachabilityForInternetConnection];
     
     if ([CurrentView getConnectivity]) {
-        
-        [weakSelf reloadData];
-        [weakSelf parseHTMLFileAtURL];
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+        [self reloadData];
+        [self parseHTMLFileAtURL];
         
         
     } else {
@@ -71,11 +68,12 @@
 - (void)reloadData
 {
 
+    [SVProgressHUD dismiss];
+    
     AppDelegate *delegate = UIAppDelegate;
     
-    __weak CurrentView *weakSelf = self;
     
-    weakSelf.internetReachable = [Reachability reachabilityForInternetConnection];
+    self.internetReachable = [Reachability reachabilityForInternetConnection];
     
     if ([CurrentView getConnectivity]) {
         
@@ -83,7 +81,7 @@
 
         
         if (!delegate.completeTrailData)
-            [weakSelf parseHTMLFileAtURL];
+            [self parseHTMLFileAtURL];
 
         WeatherRequest *newRequest = [WeatherRequest alloc];
         
@@ -98,20 +96,21 @@
             }
             else
             {
-                [weakSelf updateUIWithObservation:current];
+                [self updateUIWithObservation:current];
                 
                 // Save weather data to App Delegate to be accessed by other tab views
                 delegate.completeWeatherData = [NSMutableArray arrayWithObjects:current, forecast, hourly, nil];
                 
-                
-                //self.weatherElementsDictionary = [NSArray arrayWithObjects:current, forecast, hourly, nil];
+
             }
             
             
-            [SVProgressHUD dismiss];
+            
            
             
         }];
+        
+        [SVProgressHUD dismiss];
         
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Unavailable"
@@ -277,10 +276,10 @@
     AppDelegate *delegate = UIAppDelegate;
     
     delegate.completeTrailData = completeTrailData;
-    
-    //self.trailConditionsDictionary = completeTrailData;
-    
+        
     self.kmOpenLabel.text = kmOpenData;
+    self.kmOpenLabel.numberOfLines = 0;
+    self.kmOpenLabel.adjustsFontSizeToFitWidth = YES;
     
     // Replace hash mark with units
     NSArray *substrings = [snowDetailsData componentsSeparatedByString:@"\""];
@@ -288,6 +287,8 @@
         snowDetailsData = [NSString stringWithFormat:@"%@ in", substrings[0]];
     
     self.snowfallLabel.text = snowDetailsData;
+    self.snowfallLabel.numberOfLines = 0;
+    self.snowfallLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 

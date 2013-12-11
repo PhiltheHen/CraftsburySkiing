@@ -25,7 +25,7 @@
     return UIStatusBarStyleLightContent;
 }
 
--(IBAction) changeUnits {
+-(IBAction) changeUnits:(UISegmentedControl *)sender{
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:[NSNumber numberWithLong:[self.unitsSegment selectedSegmentIndex]] forKey:@"englishUnits"];
@@ -39,8 +39,5 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)changeUnits:(UISegmentedControl *)sender {
 }
 @end

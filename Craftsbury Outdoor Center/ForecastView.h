@@ -10,6 +10,7 @@
 #import "Observation.h"
 #import "AppDelegate.h"
 #import "WeatherRequest.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface ForecastView : UIViewController
 
