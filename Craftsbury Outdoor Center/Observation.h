@@ -19,14 +19,13 @@
 
 @property (nonatomic, strong) NSString      *timeString;
 @property (nonatomic, strong) NSString      *timeStringRFC822;
+@property (nonatomic, strong) NSString      *localTimeString;
 @property (nonatomic, strong) NSString      *weatherDescription;
 @property (nonatomic, strong) NSString      *windDescription;
 @property (nonatomic, strong) NSString      *temperatureDescription;
 @property (nonatomic, strong) NSString      *iconName;
 @property (nonatomic, strong) NSString      *iconUrl;
 @property (nonatomic, strong) NSString      *windDirection;
-@property (nonatomic, strong) NSString      *precipTodayIn;
-@property (nonatomic, strong) NSString      *precipTodayMetric;
 @property (nonatomic, strong) NSString      *precipTodayString;
 
 @property (nonatomic, strong) NSNumber      *temperatureF;

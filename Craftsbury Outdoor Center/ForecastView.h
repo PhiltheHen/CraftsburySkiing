@@ -61,6 +61,11 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lastUpdated;
 
+@property (weak, nonatomic) NSString *lastObservation;
+@property NSInteger previousUnits;
+
 -(void)updateWeatherDetailUI;
+
+- (void)checkIfUpdateNeeded:(AppDelegate *)delegate;
 
 @end

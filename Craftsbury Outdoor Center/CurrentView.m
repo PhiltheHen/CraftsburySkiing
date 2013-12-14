@@ -139,7 +139,7 @@
                 
         self.conditionsIcon.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[observation.iconUrl stringByReplacingOccurrencesOfString:@"/k/" withString:@"/i/"]]]];
         
-        self.lastUpdatedLabel.text = observation.timeString;
+        self.lastUpdatedLabel.text = [NSString stringWithFormat:@"Last Updated: %@", [observation.localTimeString stringByReplacingOccurrencesOfString:@"-0500" withString:@""]];
     }
     else
     {

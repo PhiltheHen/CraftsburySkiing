@@ -15,9 +15,13 @@
 
 @implementation ForecastView
 
+@synthesize lastObservation = _lastObservation;
+@synthesize previousUnits = _previousUnits;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        
     AppDelegate *delegate = UIAppDelegate;
     
     // if data exists, populate page
@@ -40,22 +44,24 @@
     
     // if data exists, populate page
     if (delegate.completeWeatherData[0]){
-        [self checkIfUpdateNeeded];
+        [self checkIfUpdateNeeded:delegate];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppSettingsChanged:) name:@"MyAppSettingsChanged" object:nil];
     }
     
 }
 
-- (void) checkIfUpdateNeeded
+- (void) checkIfUpdateNeeded:(AppDelegate *)delegate
 {
-    AppDelegate *delegate = UIAppDelegate;
     
     if (delegate.completeWeatherData){
         Observation *current = [delegate.completeWeatherData objectAtIndex:0];
         
-        NSString *lastUpdatedCheck = current.timeString;
+        NSString *currentObservation = current.timeString;
+        NSInteger currentUnits =[[NSUserDefaults standardUserDefaults] integerForKey:@"englishUnits"];
         
-        if (![lastUpdatedCheck isEqualToString:self.lastUpdated.text])
+        
+        // update if data is old or if user changed unit preference
+        if ((![currentObservation isEqualToString:self.lastObservation]) ||(currentUnits != self.previousUnits))
             [self updateWeatherDetailUI];
     }
     
@@ -92,6 +98,8 @@
     NSArray *upcomingWindKPH = [upcomingWind valueForKey:@"kph"];
     
     if (![[NSUserDefaults standardUserDefaults] integerForKey:@"englishUnits"]) {
+        self.previousUnits = 0;
+        
         self.detailTemp.text = [NSString stringWithFormat:@"%d°F", [current.temperatureF intValue]];
         self.detailWind.text = [NSString stringWithFormat:@"%d mph %@", [current.windSpeedMPH intValue], current.windDirection];
         
@@ -116,6 +124,8 @@
         self.day2Wind.text = [NSString stringWithFormat:@"%d mph", [[upcomingWindMPH objectAtIndex:2] intValue]];
         self.day3Wind.text = [NSString stringWithFormat:@"%d mph", [[upcomingWindMPH objectAtIndex:3] intValue]];
     } else {
+        
+        self.previousUnits = 1;
         self.detailTemp.text = [NSString stringWithFormat:@"%d°C", [current.temperatureC intValue]];
         self.detailWind.text = [NSString stringWithFormat:@"%d km/h %@", [current.windSpeedKPH intValue], current.windDirection];
         
@@ -143,7 +153,8 @@
     
     // CURRENT WEATHER
     self.detailConditions.text = current.weatherDescription;
-    self.lastUpdated.text = current.timeString;
+    self.lastObservation = current.timeString;
+    self.lastUpdated.text = [NSString stringWithFormat:@"Last Updated: %@", [current.localTimeString stringByReplacingOccurrencesOfString:@"-0500" withString:@""]];
     self.detailConditionsIcon.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[current.iconUrl stringByReplacingOccurrencesOfString:@"/k/" withString:@"/i/"]]]];
     self.detailPrecipitation.text = [NSString stringWithFormat:@"%@", current.precipTodayString];
     NSArray *upcomingPop = [[forecast.textForecast valueForKey:@"forecastday"] valueForKey:@"pop"];

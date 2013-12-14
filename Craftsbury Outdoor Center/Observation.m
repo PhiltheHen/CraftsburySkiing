@@ -22,6 +22,7 @@
                        @"image"                        : @"weatherUndergroundImageInfo",
                        @"observation_time"             : @"timeString",
                        @"observation_time_rfc822"      : @"timeStringRFC822",
+                       @"local_time_rfc822"            : @"localTimeString",
                        @"FCTTIME"                      : @"hourlyTimeInfo",
                        @"weather"                      : @"weatherDescription",
                        @"temperature_string"           : @"temperatureDescription",
@@ -33,8 +34,6 @@
                        @"wind_kph"                     : @"windSpeedKPH",
                        @"wind_dir"                     : @"windDirection",
                        @"pop"                          : @"probabilityOfPrecipitation",
-                       //@"precip_today_in"              : @"precipTodayIn",
-                       //@"precip_today_metric"          : @"precipTodayMet",
                        @"precip_today_string"          : @"precipTodayString",
                        @"txt_forecast"                 : @"textForecast",
                        @"simpleforecast"               : @"simpleForecast"
