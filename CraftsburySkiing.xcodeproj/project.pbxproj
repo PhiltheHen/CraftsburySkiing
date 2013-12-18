@@ -470,6 +470,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: CF Operations (P8S5H65KP7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -493,6 +494,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "9F028C26-3BD7-48A8-8D0C-1E6CE24CC91F";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -514,6 +516,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: CF Operations (P8S5H65KP7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -530,6 +533,7 @@
 					$SDK_DIR/usr/include/libxml2,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "9F028C26-3BD7-48A8-8D0C-1E6CE24CC91F";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -542,6 +546,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: CF Operations (P8S5H65KP7)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/CraftsburySkiing-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -552,6 +558,7 @@
 				);
 				INFOPLIST_FILE = "Craftsbury Outdoor Center/CraftsburySkiing-Info.plist";
 				PRODUCT_NAME = CraftsburySkiing;
+				PROVISIONING_PROFILE = "9F028C26-3BD7-48A8-8D0C-1E6CE24CC91F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -563,6 +570,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: CF Operations (P8S5H65KP7)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/CraftsburySkiing-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -573,6 +582,7 @@
 				);
 				INFOPLIST_FILE = "Craftsbury Outdoor Center/CraftsburySkiing-Info.plist";
 				PRODUCT_NAME = CraftsburySkiing;
+				PROVISIONING_PROFILE = "9F028C26-3BD7-48A8-8D0C-1E6CE24CC91F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

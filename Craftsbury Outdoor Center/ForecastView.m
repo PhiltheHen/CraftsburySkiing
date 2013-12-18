@@ -37,15 +37,15 @@
     return UIStatusBarStyleLightContent;
 }
 
-- (void) viewWillAppear:(BOOL)animated
+
+- (void) viewDidAppear:(BOOL)animated
 {
     
     AppDelegate *delegate = UIAppDelegate;
     
-    // if data exists, populate page
+    // if data exists, check if page needs update
     if (delegate.completeWeatherData[0]){
         [self checkIfUpdateNeeded:delegate];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppSettingsChanged:) name:@"MyAppSettingsChanged" object:nil];
     }
     
 }
@@ -59,9 +59,8 @@
         NSString *currentObservation = current.timeString;
         NSInteger currentUnits =[[NSUserDefaults standardUserDefaults] integerForKey:@"englishUnits"];
         
-        
         // update if data is old or if user changed unit preference
-        if ((![currentObservation isEqualToString:self.lastObservation]) ||(currentUnits != self.previousUnits))
+        if ((![currentObservation isEqualToString:self.lastObservation]) || (currentUnits != self.previousUnits))
             [self updateWeatherDetailUI];
     }
     

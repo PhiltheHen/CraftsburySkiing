@@ -16,26 +16,15 @@ static NSString *const kPath = @"conditions/forecast/hourly/q/05827.json";
 
 @implementation WeatherRequest
 
-#pragma mark - Singleton
-
 + (instancetype)requestOperation
 {
     
-    static WeatherRequest *sharedRequest = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.wunderground.com/api/0f26d3b3dcb3da08/conditions/forecast/hourly/q/05827.json"]];
-         sharedRequest = [[self alloc] initWithRequest:request];
-    });
-    
-    return sharedRequest;
-}
+    WeatherRequest *sharedRequest = nil;
 
--(id)init {
-    if (self = [super init]){
-        
-    }
-    return self;
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.wunderground.com/api/0f26d3b3dcb3da08/conditions/forecast/hourly/q/05827.json"]];
+    sharedRequest = [[self alloc] initWithRequest:request];
+
+    return sharedRequest;
 }
 
 - (void)getWeather:(void(^)(Observation *current, Observation *forecast, NSArray *hourly, NSError *error))completion

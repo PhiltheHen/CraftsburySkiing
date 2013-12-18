@@ -17,7 +17,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -26,18 +25,13 @@
 }
 
 -(IBAction) changeUnits:(UISegmentedControl *)sender{
-    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:[NSNumber numberWithLong:[self.unitsSegment selectedSegmentIndex]] forKey:@"englishUnits"];
-    [userDefaults synchronize];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"MyAppSettingsChanged" object:self userInfo:nil];
-    
-    
+    [userDefaults synchronize];    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 @end

@@ -22,19 +22,17 @@
 {
     [super viewDidLoad];
     
-    // check for internet connection
+    // if network connection, get data
     
     self.internetReachable = [Reachability reachabilityForInternetConnection];
     
     if ([CurrentView getConnectivity]) {
-        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
         [self reloadData];
         [self parseHTMLFileAtURL];
         
-        
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Unavailable"
-                                                        message:@"App content may be limited without a network connection!"
+                                                        message:@"Can't update weather without internet connection."
                                                        delegate:self
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
@@ -47,7 +45,9 @@
     return UIStatusBarStyleLightContent;
 }
 
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated{
+    
+    // always checking for updated and correct info
     
     AppDelegate *delegate = UIAppDelegate;
     
@@ -67,11 +67,8 @@
 
 - (void)reloadData
 {
-
-    [SVProgressHUD dismiss];
     
     AppDelegate *delegate = UIAppDelegate;
-    
     
     self.internetReachable = [Reachability reachabilityForInternetConnection];
     
@@ -80,10 +77,12 @@
         [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
 
         
-        if (!delegate.completeTrailData)
+        if (!delegate.completeTrailData){
             [self parseHTMLFileAtURL];
-
-        WeatherRequest *newRequest = [WeatherRequest alloc];
+        }
+        
+        WeatherRequest *newRequest = [WeatherRequest requestOperation];
+        
         
         
         [newRequest getWeather:^(Observation *current, Observation *forecast, NSArray *hourly, NSError *error) {
@@ -99,20 +98,19 @@
                 [self updateUIWithObservation:current];
                 
                 // Save weather data to App Delegate to be accessed by other tab views
+                
                 delegate.completeWeatherData = [NSMutableArray arrayWithObjects:current, forecast, hourly, nil];
                 
 
             }
             
             
-            
-           
-            
         }];
         
         [SVProgressHUD dismiss];
         
     } else {
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Unavailable"
                                                         message:@"Can't update weather without internet connection."
                                                        delegate:self
@@ -155,9 +153,8 @@
 
 - (void)parseHTMLFileAtURL
 {
-    
+        
     NSString *snowReportURL = @"http://craftsbury.com/skiing/nordic_center/snow_report.htm";
-    //NSString *snowReportURLTEST = @"http://web.archive.org/web/20120114043339/http://www.craftsbury.com/skiing/nordic_center/snow_report.htm";
     
     NSData *snowReportData = [NSData dataWithContentsOfURL:[NSURL URLWithString:snowReportURL]];
     
