@@ -162,8 +162,7 @@
     
     NSArray *snowDetails = [snowReportParser searchWithXPathQuery:@"//div[@id='snow-details']/p/span[@class='data']"];
     NSArray *kmOpen = [snowReportParser searchWithXPathQuery:@"//div[@id='kilometers-open']/p/span[@class='data']"];
-    NSArray *trailLengths = [snowReportParser searchWithXPathQuery:@"//div[@id='trail-conditions']/table/tr/td[@class='trail-kilometers']"];
-    NSArray *trailConditions = [snowReportParser searchWithXPathQuery:@"//div[@id='trail-conditions']/table/tr/td"];
+    NSArray *trailConditions = [snowReportParser searchWithXPathQuery:@"//div[@id='trail-conditions']/table//td"];
     NSArray *trailNames = [snowReportParser searchWithXPathQuery:@"//div[@id='trail-conditions']/table/tr/td/span[@class='trail-name']"];
     
     NSArray *trailNodes = [snowReportParser searchWithXPathQuery:@"//div[@id='trail-conditions']/table/tr/td/span[@class]"];
@@ -171,12 +170,11 @@
     
     NSString *snowDetailsData = @"";
     NSString *kmOpenData = @"";
-    NSMutableArray *trailConditionsData = [NSMutableArray array];
     NSMutableArray *trailLengthsData = [NSMutableArray array];
     NSMutableArray *trailStatusData = [NSMutableArray array];
     NSMutableArray *trailNamesData = [NSMutableArray array];
     NSMutableArray *trailDateGroomed = [NSMutableArray array];
-    NSMutableArray *trailDateTracked = [NSMutableArray array];
+    NSMutableArray *trailNote = [NSMutableArray array];
     NSMutableArray *trailDifficulty = [NSMutableArray array];
     
     
@@ -198,15 +196,32 @@
     /* GET TRAIL STATUS */
     
     int idx=0;
-    for (TFHppleElement *element in trailConditions){
-        trailConditionsData[idx] = [element text];
-        idx++;
-    }
+    int counter=0;
+    long sizeArray = [trailConditions count];
     
-    idx=0;
-    for (TFHppleElement *element in trailLengths){
-        trailLengthsData[idx] = [element text];
-        idx++;
+    while (counter + 2 <= sizeArray){
+        
+        element = trailConditions[counter];
+        
+        if ([[[element attributes] valueForKey:@"class"] isEqualToString:@"trail-kilometers"]){
+            trailLengthsData[idx] = [element text];
+            element = trailConditions[counter+1];
+            
+            if ([[element text] isEqualToString:@"CLOSED"]){
+                trailStatusData[idx] = @"CLOSED";
+                trailDateGroomed[idx] = @"--";
+                trailNote[idx] = @" ";
+            }
+            else {
+                trailStatusData[idx] = @"OPEN";
+                trailDateGroomed[idx] = [element text];
+                
+                element = trailConditions[counter+2];
+                trailNote[idx] = [[element text] stringByReplacingOccurrencesOfString:@"\u00a0" withString:@" "];
+            }
+            idx++;
+        }
+        counter++;
     }
     
     idx=0;
@@ -216,31 +231,6 @@
         idx++;
     }
     
-    int counter = 0;
-    int trailIdx=0;
-    
-    while (counter < [trailConditionsData count]){
-        
-        
-        if ([trailConditionsData[counter+2] isEqualToString:@"CLOSED"]){
-            trailStatusData[trailIdx] = @"CLOSED";
-            trailDateGroomed[trailIdx] = @"--";
-            trailDateTracked[trailIdx] = @"--";
-            counter = counter + 3;
-        }
-        else {
-            trailStatusData[trailIdx] = @"OPEN";
-            trailDateGroomed[trailIdx] = trailConditionsData[counter + 2];
-            
-            trailDateTracked[trailIdx] = trailConditionsData[counter + 3];
-            counter = counter + 5;
-        }
-        
-        trailIdx++;
-        
-        
-        
-    }
     
     /* GET TRAIL DIFFICULTY */
     
@@ -266,8 +256,8 @@
     }
     
     
-    NSArray *keys = [NSArray arrayWithObjects:@"Name", @"Length", @"Status", @"Groomed", @"Tracked", @"Difficulty", nil];
-    NSArray *objects = [NSArray arrayWithObjects:trailNamesData, trailLengthsData, trailStatusData, trailDateGroomed, trailDateTracked, trailDifficulty, nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"Name", @"Length", @"Status", @"Groomed", @"Note", @"Difficulty", nil];
+    NSArray *objects = [NSArray arrayWithObjects:trailNamesData, trailLengthsData, trailStatusData, trailDateGroomed, trailNote, trailDifficulty, nil];
     NSMutableDictionary *completeTrailData = [NSMutableDictionary dictionaryWithObjects:objects forKeys:keys];
     
     AppDelegate *delegate = UIAppDelegate;

@@ -11,7 +11,7 @@
 @interface TrailCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *trailNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *trailGroomedLabel;
-@property (weak, nonatomic) IBOutlet UILabel *trailTrackedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *trailNoteLabel;
 @property (weak, nonatomic) IBOutlet UILabel *trailOpenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *trailClosedLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *trailUIIcon;

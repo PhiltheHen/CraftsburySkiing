@@ -80,7 +80,7 @@
         
         NSArray *trailNames = [delegate.completeTrailData objectForKey:@"Name"];
         NSArray *trailLength = [delegate.completeTrailData objectForKey:@"Length"];
-        NSArray *trailTracked = [delegate.completeTrailData objectForKey:@"Tracked"];
+        NSArray *trailNote = [delegate.completeTrailData objectForKey:@"Note"];
         NSArray *trailGroomed = [delegate.completeTrailData objectForKey:@"Groomed"];
         NSArray *trailStatus = [delegate.completeTrailData objectForKey:@"Status"];
         NSArray *trailDifficulty = [delegate.completeTrailData objectForKey:@"Difficulty"];
@@ -106,11 +106,11 @@
         else
             cell.trailGroomedLabel.text = @"";
         
-        NSString *cellBotRightDetail = [trailTracked objectAtIndex:indexPath.row];
-        if (![[trailTracked objectAtIndex:indexPath.row] isEqualToString:@"%nbsp"])
-            cell.trailTrackedLabel.text = [NSString stringWithFormat:@"Tracked: %@", cellBotRightDetail];
+        NSString *cellBotRightDetail = [trailNote objectAtIndex:indexPath.row];
+        if (![[trailNote objectAtIndex:indexPath.row] isEqualToString:@"%nbsp"])
+            cell.trailNoteLabel.text = [NSString stringWithFormat:@"Note: %@", cellBotRightDetail];
         else
-            cell.trailTrackedLabel.text = @"";
+            cell.trailNoteLabel.text = @"";
         
         NSString *cellImageKey = [trailDifficulty objectAtIndex:indexPath.row];
         
