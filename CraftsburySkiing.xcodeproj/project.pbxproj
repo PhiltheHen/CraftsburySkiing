@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5CBF56650ACD1B338A812B /* libPods-CraftsburySkiing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6E3E128049C65AA9D224E4 /* libPods-CraftsburySkiing.a */; };
+		13AF42E633FFBF0F4975A481 /* libPods-CraftsburySkiingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A402DB2180150F216BEF1557 /* libPods-CraftsburySkiingTests.a */; };
 		3A0E5ACE184BBB1600D02E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0E5ACD184BBB1600D02E5B /* Foundation.framework */; };
 		3A0E5AD0184BBB1600D02E5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0E5ACF184BBB1600D02E5B /* CoreGraphics.framework */; };
 		3A0E5AD2184BBB1600D02E5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0E5AD1184BBB1600D02E5B /* UIKit.framework */; };
@@ -36,7 +38,6 @@
 		3A4CF2B1184D146200B12295 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CF2B0184D146200B12295 /* libxml2.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 		3A4CF2B3184D147500B12295 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4CF2B2184D147500B12295 /* QuartzCore.framework */; };
 		3A4CF2B9184D5D2400B12295 /* TrailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4CF2B8184D5D2400B12295 /* TrailCell.m */; };
-		E3AB6488BC4C441183543AF7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A2A7E09A854B8F810C692E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D6E3E128049C65AA9D224E4 /* libPods-CraftsburySkiing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CraftsburySkiing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0E5ACA184BBB1500D02E5B /* CraftsburySkiing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CraftsburySkiing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0E5ACD184BBB1600D02E5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A0E5ACF184BBB1600D02E5B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,8 +97,12 @@
 		3A4CF2B2184D147500B12295 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3A4CF2B7184D5D2400B12295 /* TrailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailCell.h; sourceTree = "<group>"; };
 		3A4CF2B8184D5D2400B12295 /* TrailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailCell.m; sourceTree = "<group>"; };
+		640B4FDD04C77E0D436E3B7B /* Pods-CraftsburySkiingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraftsburySkiingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CraftsburySkiingTests/Pods-CraftsburySkiingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65A2A7E09A854B8F810C692E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD39679567FD4B6783A4E5B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6E3B1CC801152DB7A8DE6965 /* Pods-CraftsburySkiing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraftsburySkiing.release.xcconfig"; path = "Pods/Target Support Files/Pods-CraftsburySkiing/Pods-CraftsburySkiing.release.xcconfig"; sourceTree = "<group>"; };
+		7630AB82DCE799FF2144D83D /* Pods-CraftsburySkiingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraftsburySkiingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CraftsburySkiingTests/Pods-CraftsburySkiingTests.release.xcconfig"; sourceTree = "<group>"; };
+		A402DB2180150F216BEF1557 /* libPods-CraftsburySkiingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CraftsburySkiingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFB14C71A082967E3D56D6F5 /* Pods-CraftsburySkiing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CraftsburySkiing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CraftsburySkiing/Pods-CraftsburySkiing.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +118,7 @@
 				3A4CF2AD184D143F00B12295 /* MobileCoreServices.framework in Frameworks */,
 				3A0E5AD2184BBB1600D02E5B /* UIKit.framework in Frameworks */,
 				3A0E5ACE184BBB1600D02E5B /* Foundation.framework in Frameworks */,
-				E3AB6488BC4C441183543AF7 /* libPods.a in Frameworks */,
+				0C5CBF56650ACD1B338A812B /* libPods-CraftsburySkiing.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +129,7 @@
 				3A0E5AF0184BBB1600D02E5B /* XCTest.framework in Frameworks */,
 				3A0E5AF2184BBB1600D02E5B /* UIKit.framework in Frameworks */,
 				3A0E5AF1184BBB1600D02E5B /* Foundation.framework in Frameworks */,
+				13AF42E633FFBF0F4975A481 /* libPods-CraftsburySkiingTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +146,7 @@
 				3A0E5AF5184BBB1600D02E5B /* CraftsburyTests */,
 				3A0E5ACC184BBB1600D02E5B /* Frameworks */,
 				3A0E5ACB184BBB1500D02E5B /* Products */,
-				FD39679567FD4B6783A4E5B1 /* Pods.xcconfig */,
+				943038621E42E7645837D3F3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +172,8 @@
 				3A0E5AD1184BBB1600D02E5B /* UIKit.framework */,
 				3A0E5AEF184BBB1600D02E5B /* XCTest.framework */,
 				65A2A7E09A854B8F810C692E /* libPods.a */,
+				0D6E3E128049C65AA9D224E4 /* libPods-CraftsburySkiing.a */,
+				A402DB2180150F216BEF1557 /* libPods-CraftsburySkiingTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -258,6 +267,17 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		943038621E42E7645837D3F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFB14C71A082967E3D56D6F5 /* Pods-CraftsburySkiing.debug.xcconfig */,
+				6E3B1CC801152DB7A8DE6965 /* Pods-CraftsburySkiing.release.xcconfig */,
+				640B4FDD04C77E0D436E3B7B /* Pods-CraftsburySkiingTests.debug.xcconfig */,
+				7630AB82DCE799FF2144D83D /* Pods-CraftsburySkiingTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,9 +304,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A0E5B02184BBB1600D02E5B /* Build configuration list for PBXNativeTarget "CraftsburySkiingTests" */;
 			buildPhases = (
+				4E5B1569370DE46B8BE06887 /* Check Pods Manifest.lock */,
 				3A0E5AEA184BBB1600D02E5B /* Sources */,
 				3A0E5AEB184BBB1600D02E5B /* Frameworks */,
 				3A0E5AEC184BBB1600D02E5B /* Resources */,
+				8DFE2D3783F3784248791B84 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,6 +375,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4E5B1569370DE46B8BE06887 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8DFE2D3783F3784248791B84 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CraftsburySkiingTests/Pods-CraftsburySkiingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BF33EDDD62D7489B9458DA3D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,7 +432,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CraftsburySkiing/Pods-CraftsburySkiing-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -492,8 +544,9 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					$SDK_DIR/usr/include/libxml2,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PROVISIONING_PROFILE = "9F028C26-3BD7-48A8-8D0C-1E6CE24CC91F";
 				SDKROOT = iphoneos;
 			};
@@ -532,7 +585,8 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					$SDK_DIR/usr/include/libxml2,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				OTHER_LDFLAGS = "$(inherited)";
 				PROVISIONING_PROFILE = "9F028C26-3BD7-48A8-8D0C-1E6CE24CC91F";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -541,54 +595,47 @@
 		};
 		3A0E5B00184BBB1600D02E5B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD39679567FD4B6783A4E5B1 /* Pods.xcconfig */;
+			baseConfigurationReference = FFB14C71A082967E3D56D6F5 /* Pods-CraftsburySkiing.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: CF Operations (P8S5H65KP7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/CraftsburySkiing-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/AFNetworking\"",
-					"\"${PODS_ROOT}/Headers/SVProgressHUD\"",
-					$SDK_DIR/usr/include/libxml2,
-				);
 				INFOPLIST_FILE = "Craftsbury Outdoor Center/CraftsburySkiing-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = CraftsburySkiing;
 				PROVISIONING_PROFILE = "9F028C26-3BD7-48A8-8D0C-1E6CE24CC91F";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		3A0E5B01184BBB1600D02E5B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD39679567FD4B6783A4E5B1 /* Pods.xcconfig */;
+			baseConfigurationReference = 6E3B1CC801152DB7A8DE6965 /* Pods-CraftsburySkiing.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: CF Operations (P8S5H65KP7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Craftsbury Outdoor Center/CraftsburySkiing-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/AFNetworking\"",
-					"\"${PODS_ROOT}/Headers/SVProgressHUD\"",
-					$SDK_DIR/usr/include/libxml2,
-				);
 				INFOPLIST_FILE = "Craftsbury Outdoor Center/CraftsburySkiing-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = CraftsburySkiing;
 				PROVISIONING_PROFILE = "9F028C26-3BD7-48A8-8D0C-1E6CE24CC91F";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		3A0E5B03184BBB1600D02E5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 640B4FDD04C77E0D436E3B7B /* Pods-CraftsburySkiingTests.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Craftsbury Outdoor Center.app/Craftsbury Outdoor Center";
@@ -612,6 +659,7 @@
 		};
 		3A0E5B04184BBB1600D02E5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7630AB82DCE799FF2144D83D /* Pods-CraftsburySkiingTests.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Craftsbury Outdoor Center.app/Craftsbury Outdoor Center";
