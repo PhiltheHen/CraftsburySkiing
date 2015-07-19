@@ -17,4 +17,5 @@
 @property (strong, nonatomic) NSMutableArray *completeWeatherData;
 @property (strong, nonatomic) NSMutableDictionary *completeTrailData;
 
+
 @end

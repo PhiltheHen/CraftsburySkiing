@@ -17,6 +17,8 @@
 #import "Reachability.h"
 #import "WeatherRequest.h"
 
+// THIS IS A TEST
+
 @interface CurrentView : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
