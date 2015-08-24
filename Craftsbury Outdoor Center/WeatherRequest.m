@@ -13,6 +13,7 @@ static NSString *const kWeatherUndergroundAPIBaseURLString = @"http://api.wunder
 static NSString *const kPath = @"conditions/forecast/hourly/q/05827.json";
 
 // full URL: http:// api.wunderground.com/api/0f26d3b3dcb3da08/conditions/forecast/hourly/q/05827.json
+// TESTING URL: http://api.wunderground.com/api/0f26d3b3dcb3da08/conditions/forecast/hourly/q/CA/San_Francisco.json
 
 @implementation WeatherRequest
 
