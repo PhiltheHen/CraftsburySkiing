@@ -31,8 +31,9 @@ class TrailStatus {
         
 
 
-    init(){
+    func parseHTML(){
 
+        println("Inside parseHTML")
         // Parse HTML
         let snowReportURL = "http://craftsbury.com/skiing/nordic_center/snow_report.htm"
         if let url = NSURL(string: snowReportURL){
@@ -72,10 +73,10 @@ class TrailStatus {
 
                     while (counter + 2 <= trailConditions.count){
                         element = trailConditions[counter] as! TFHppleElement
-                            if (element.attributes["class"]?.value == "trail-kilmoeters"){
+                            if element.attributes["class"] as? String == "trail-kilmoeters"{
                                 self.trailLengthsData.append(element.text())
                                 element = trailConditions[counter+1] as! TFHppleElement
-                                if (element.text() == "CLOSED"){
+                                if element.text() == "CLOSED"{
                                     self.trailStatusData.append("CLOSED")
                                     self.trailDateGroomed.append("--")
                                     self.trailNote.append(" ")
@@ -92,11 +93,10 @@ class TrailStatus {
                                             self.trailNote.append(editString)
                                         }
                                     }
-                                    counter++
                                 }
 
                             }
-
+                        counter++
 
                     }
 
@@ -107,6 +107,7 @@ class TrailStatus {
                                 editString.removeRange(range)
                                 editString.insert(" ", atIndex: range.startIndex)
                                 self.trailNamesData.append(editString)
+                                println("Trail Name: \(self.trailNamesData)")
                             }
                         }
 
@@ -115,16 +116,16 @@ class TrailStatus {
                     //Get Trail Difficulty
 
                     for element in trailNodes as! Array<TFHppleElement>{
-                        if (element["class"] == "beginner trail-number"){
+                        if element.attributes["class"] as? String == "beginner trail-number"{
                             self.trailDifficulty.append("beginner")
                         }
-                        else if (element["class"] == "intermediate trail-number"){
+                        else if element.attributes["class"] as? String == "intermediate trail-number"{
                             self.trailDifficulty.append("intermediate")
                         }
-                        else if (element["class"] == "advanced trail-number"){
+                        else if element.attributes["class"] as? String == "advanced trail-number"{
                             self.trailDifficulty.append("advanced")
                         }
-                        else if (element["class"] == "na trail-number"){
+                        else if element.attributes["class"] as? String == "na trail-number"{
                             self.trailDifficulty.append("na trail-number")
                         }
 

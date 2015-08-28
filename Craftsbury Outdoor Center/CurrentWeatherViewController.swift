@@ -20,14 +20,16 @@ class CurrentWeatherViewController: UIViewController {
     @IBOutlet weak var kmOpenLabel: UILabel!
     @IBOutlet weak var snowfallLabel: UILabel!
     @IBOutlet weak var lastUpdatedLabel: UILabel!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 
     var weather: WeatherData!
+    var trailStatus: TrailStatus!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // if network connection, get data
-        
+
         let reachability = Reachability.reachabilityForInternetConnection()
 
         reachability.whenReachable = { reachability in
@@ -36,34 +38,52 @@ class CurrentWeatherViewController: UIViewController {
             } else {
                 println("Reachable via Cellular")
             }
-
-            // TODO: Check conditions to see if English or Metric units are selected
-
-            // Initialize weatherData with API call in class init()
-            var weatherData = WeatherData();
-
-            // Initialize trailStatus with HTTP request in class init()
-            var trailStatus = TrailStatus();
-
-            self.updateViewWithData(weatherData, trails: trailStatus)
-
-
-
         }
         reachability.whenUnreachable = { reachability in
             println("Not reachable")
+        }
+
+        if reachability.isReachable(){
+
+            // TODO: Check conditions to see if English or Metric units are selected
+            // Initialize weatherData with API call in class init()
+            self.activityIndicatorView.startAnimating()
+            self.activityIndicatorView.hidesWhenStopped = true
+            
+            self.getWeatherAndTrailStatus()
+
+        } else{
             var alert = UIAlertController(title: "Network Unavailable", message: "Can't update weather without internet connection.", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
-
         }
 
         reachability.startNotifier()
+
+    }
+
+    func getWeatherAndTrailStatus() {
+
+        var newRequest = WeatherRequest()
+        var trailStatus = TrailStatus()
+        trailStatus.parseHTML()
+        newRequest.requestWeather{ (weather, error) in
+            if let latestWeather = weather {
+                self.updateViewWithData(latestWeather, trails: trailStatus)
+                self.activityIndicatorView.stopAnimating()
+
+            } else {
+                // Handle error here
+            }
+        }
+
+
     }
     func updateViewWithData(weather: WeatherData, trails: TrailStatus){
         // Populate view
 
         self.weather = weather
+        self.trailStatus = trails
 
         if var rawDate = self.weather.timeStringRFC822 {
             let range = advance(rawDate.endIndex, -15)..<rawDate.endIndex
@@ -97,16 +117,14 @@ class CurrentWeatherViewController: UIViewController {
 
         // HTML DATA HERE
 
-        if let kmOpenString = trails.kmOpenData{
+        if let kmOpenString = self.trailStatus.kmOpenData{
             self.kmOpenLabel.text = kmOpenString
 
         }
 
-        if let snowfallString = trails.snowfallData{
+        if let snowfallString = self.trailStatus.snowfallData{
             self.snowfallLabel.text = snowfallString
         }
-
-
 
 
     }
@@ -115,20 +133,33 @@ class CurrentWeatherViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showForecast"
         {
-            let destinationVC = segue.destinationViewController as ForecastViewController
-            destinationVC.weatherData = self.weather
-        }
-        else if segue.identifier == "showTrailStatus"
-        {
-            let destinationVC = segue.destinationViewController as TrailStatusViewController
-            destinationVC.weatherData = self.weather
-        }
-        else
-        {
-            let destinationVC = segue.destinationViewController as SettingsViewController
-            destinationVC.weatherData = self.weather
+            if let destinationVC = segue.destinationViewController as? ForecastViewController{
+                destinationVC.weather = self.weather
+            }
         }
 
+        if segue.identifier == "showTrailStatus"
+        {
+            if let destinationVC = segue.destinationViewController as? TrailStatusViewController {
+                destinationVC.trails = self.trailStatus
+            }
+        }
+
+    }
+
+    func reachabilityChanged(note: NSNotification) {
+
+        let reachability = note.object as! Reachability
+
+        if reachability.isReachable() {
+            if reachability.isReachableViaWiFi() {
+                println("Reachable via WiFi")
+            } else {
+                println("Reachable via Cellular")
+            }
+        } else {
+            println("Not reachable")
+        }
     }
 
 
